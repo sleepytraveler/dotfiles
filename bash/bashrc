@@ -1,0 +1,57 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+
+# Source proxy environment variables
+if [ -f $HOME/.config/bash/proxy_setup.sh ]; then
+	. $HOME/.config/bash/proxy_setup.sh
+fi
+
+# Create a custom prompt
+# First line is Time user@host path
+# Second line is $ with special background
+
+bg_separator=""
+fg_separator=""
+prompt_fg_color='\e[38;5;240m'
+prompt_bg_color='\e[48;5;240m'
+shell_default_bg='\e[49m'
+
+# Inside TMUX don't display time and host
+if [[ -z "$TMUX" ]]; then
+	PS1="\A \u@\h \e[0m\e[32m\w \e[0m\\n"
+else
+	PS1="\u \e[32m\w \e[0m\\n"
+fi
+
+# For the end of the prompt the shell background color needs to be displayed
+# to display the separator correctly. Then finally reset all colors and effects
+PS1+="${prompt_bg_color} $ ${prompt_fg_color}${shell_default_bg}${bg_separator}\e[0m"
+
+# Aliases ------------------------------------------
+
+# Two letter alias for recursively listing all files
+alias lr="ls -R"
+alias ll="ls -l -a"
+alias df="df -h"
+
+# Source powerline configuration
+export POWERLINE_NO_SHELL_PROMPT="TRUE"
+command -v powerline-daemon &>/dev/null
+if [ $? -eq 0 ]; then
+#	POWERLINE_BASH_CONTINUATION=1
+#	POWERLINE_BASH_SELECT=1
+	. $HOME/.config/bash/powerline.sh
+fi
+
+# Setup SSH agent
+#. $HOME/.config/bash/ssh_agent_config.sh
+
