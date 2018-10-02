@@ -52,6 +52,7 @@ if [ $? -eq 0 ]; then
 	. $HOME/.config/bash/powerline.sh
 fi
 
-# Setup SSH agent
-#. $HOME/.config/bash/ssh_agent_config.sh
-
+# Setup SSH agent using keychain
+if [ -f $HOME/.config/bash/keychain-setup.sh ]; then
+	. $HOME/.config/bash/keychain-setup.sh
+fi
