@@ -18,5 +18,6 @@ call plug#end()
 " Set a dark background
 set background=dark
 
-" Enable line numbers
+" Enable line numbers and column numbers
 set number
+set ruler
