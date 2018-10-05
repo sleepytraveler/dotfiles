@@ -1,0 +1,7 @@
+List of tools to install as soon as new system is up
+
+1. Neovim
+2. keychain
+3. fish
+4. powerline
+5. tmux
