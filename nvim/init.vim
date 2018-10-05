@@ -1,19 +1,8 @@
-
-
-" Setup Vim Plug (a plugin manager for VIM/NVIM)
-" https://github.com/junegunn/vim-plug
-""" Specify directory for plugins
-call plug#begin('~/.config/nvim/plugins')
-
-Plug 'junegunn/vim-easy-align'
-
-" On-demand loading
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-
-" Linux kernel coding style plugin
-Plug 'vivien/vim-linux-coding-style'
-
-call plug#end()
+" Import all the .vim files that are used for configuraiton
+" https://afnan.io/2018-04-12/my-neovim-development-setup/
+for conf_file in split(glob('~/.config/nvim/config/*.vim'), '\n')
+	exe 'source' conf_file
+endfor
 
 " Set a dark background
 set background=dark
