@@ -10,9 +10,6 @@ Plug 'junegunn/vim-easy-align'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" Git gutter provides a diff in the gutter
-Plug 'airblade/vim-gitgutter'
-
 " Cscope plugin that puts results in quickfix window
 Plug  'ronakg/quickr-cscope.vim'
 
@@ -21,6 +18,9 @@ Plug 'tpope/vim-fugitive'
 
 " NERDTree - using on-demand loading
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+
+" Git gutter provides a diff in the gutter
+" Plug 'airblade/vim-gitgutter'
 
 " Linux kernel coding style plugin
 Plug 'vivien/vim-linux-coding-style'
