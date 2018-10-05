@@ -6,6 +6,13 @@ call plug#begin('~/.config/nvim/plugins')
 
 Plug 'junegunn/vim-easy-align'
 
+" Vim airline for powerline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+" Git gutter provides a diff in the gutter
+Plug 'airblade/vim-gitgutter'
+
 " Cscope plugin that puts results in quickfix window
 Plug  'ronakg/quickr-cscope.vim'
 
