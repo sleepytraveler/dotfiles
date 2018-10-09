@@ -16,6 +16,8 @@ Plug  'ronakg/quickr-cscope.vim'
 " Vim fugitive
 Plug 'tpope/vim-fugitive'
 
+Plug 'tpope/vim-surround'
+
 " NERDTree - using on-demand loading
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
@@ -24,6 +26,8 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
 " Linux kernel coding style plugin
 Plug 'vivien/vim-linux-coding-style'
+
+Plug 'Valloric/YouCompleteMe', { 'do' : './install.py' }
 
 call plug#end()
 
@@ -37,3 +41,4 @@ let g:airline_powerline_fonts = 1
 "Git Gutter setup
 " Reduce the NVIM update time to 250 ms
 set updatetime=250
+
