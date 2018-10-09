@@ -56,3 +56,5 @@ fi
 if [ -f $HOME/.config/bash/keychain-setup.sh ]; then
 	. $HOME/.config/bash/keychain-setup.sh
 fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

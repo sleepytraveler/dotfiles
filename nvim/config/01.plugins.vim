@@ -27,7 +27,7 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 " Linux kernel coding style plugin
 Plug 'vivien/vim-linux-coding-style'
 
-Plug 'junegunn/fzf' { 'dir': ~/.fzf', 'do': './install -all'}
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
