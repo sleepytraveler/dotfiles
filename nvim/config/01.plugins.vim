@@ -27,7 +27,14 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 " Linux kernel coding style plugin
 Plug 'vivien/vim-linux-coding-style'
 
-Plug 'Valloric/YouCompleteMe', { 'do' : './install.py' }
+Plug 'junegunn/fzf'
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+"Plug 'ncm2/ncm2-pyclang'
 
 call plug#end()
 
