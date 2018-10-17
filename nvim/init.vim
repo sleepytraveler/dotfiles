@@ -10,3 +10,6 @@ set background=dark
 " Enable line numbers and column numbers
 set number
 set ruler
+
+colorscheme sublimemonokai
+syntax enable

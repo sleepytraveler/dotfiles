@@ -21,6 +21,9 @@ Plug 'tpope/vim-surround'
 " NERDTree - using on-demand loading
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
+" Commenting helper
+Plug 'scrooloose/nerdcommenter'
+
 " Git gutter provides a diff in the gutter
 " Plug 'airblade/vim-gitgutter'
 
@@ -36,6 +39,9 @@ Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
 "Plug 'ncm2/ncm2-pyclang'
 
+"Molokai colorscheme
+Plug 'ErichDonGubler/vim-sublime-monokai'
+
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -49,3 +55,5 @@ let g:airline_powerline_fonts = 1
 " Reduce the NVIM update time to 250 ms
 set updatetime=250
 
+"Setup for NERDcommenter
+filetype plugin on

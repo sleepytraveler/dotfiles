@@ -40,7 +40,7 @@ PS1+="${prompt_bg_color} $ ${prompt_fg_color}${shell_default_bg}${bg_separator}\
 
 # Two letter alias for recursively listing all files
 alias lr="ls -R"
-alias ll="ls -l -a"
+alias ll="ls -l -a -h"
 alias df="df -h"
 
 # Source powerline configuration
