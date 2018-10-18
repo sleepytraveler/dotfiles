@@ -9,3 +9,8 @@ LICENSE
 monitors*
 pulse
 mimeapps*
+
+# Ignore nvim & tmux plugins
+nvim/plugins
+tmux/plugins
+tmux/tmux-themepack

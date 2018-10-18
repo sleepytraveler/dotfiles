@@ -59,3 +59,7 @@ set updatetime=250
 
 "Setup for NERDcommenter
 filetype plugin on
+
+" Setup ncm2 specific configuration
+let g:ncm2#complete_delay = 350
+
