@@ -4,12 +4,15 @@ for conf_file in split(glob('~/.config/nvim/config/*.vim'), '\n')
 	exe 'source' conf_file
 endfor
 
-" Set a dark background
-set background=dark
-
 " Enable line numbers and column numbers
 set number
 set ruler
 
+set termguicolors
 colorscheme sublimemonokai
 syntax enable
+let g:sublimemonokai_term_italic = 1
+
+" Set a dark background
+" set background=dark
+
