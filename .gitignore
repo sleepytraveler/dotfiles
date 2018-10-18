@@ -1,0 +1,11 @@
+gtk*
+gnome*
+evolution*
+Xauthority
+dconf
+ibus
+imsettings
+LICENSE
+monitors*
+pulse
+mimeapps*
