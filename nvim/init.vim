@@ -16,3 +16,6 @@ let g:sublimemonokai_term_italic = 1
 " Set a dark background
 " set background=dark
 
+" Always set the sign column/gutter instead of doing it for specific
+" plugins
+set signcolumn=yes
