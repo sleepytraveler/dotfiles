@@ -5,3 +5,6 @@ List of tools to install as soon as new system is up
 3. fish
 4. powerline
 5. tmux
+6. FZF (installed through VIM plugin)
+7. Ag
+
