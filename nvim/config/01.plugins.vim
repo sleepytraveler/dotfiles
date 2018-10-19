@@ -46,6 +46,8 @@ Plug 'ErichDonGubler/vim-sublime-monokai'
 
 Plug 'ntpeters/vim-better-whitespace'
 
+Plug 'embear/vim-localvimrc'
+
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -56,6 +58,7 @@ call plug#end()
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 "Git Gutter setup
 " Reduce the NVIM update time to 250 ms
@@ -64,3 +67,5 @@ set updatetime=250
 "Setup for NERDcommenter
 filetype plugin on
 
+" Setup for localvimrc loading plugin
+let g:localvimrc_persistent = 1
