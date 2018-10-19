@@ -44,6 +44,8 @@ Plug 'ncm2/ncm2-path'
 "Molokai colorscheme
 Plug 'ErichDonGubler/vim-sublime-monokai'
 
+Plug 'ntpeters/vim-better-whitespace'
+
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -52,6 +54,8 @@ call plug#end()
 
 " vim-airline setup
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
 
 "Git Gutter setup
 " Reduce the NVIM update time to 250 ms
@@ -59,7 +63,4 @@ set updatetime=250
 
 "Setup for NERDcommenter
 filetype plugin on
-
-" Setup ncm2 specific configuration
-let g:ncm2#complete_delay = 350
 

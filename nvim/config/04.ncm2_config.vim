@@ -9,3 +9,6 @@ autocmd BufEnter * call ncm2#enable_for_buffer()
 " Set completion options
 set completeopt=noinsert,menuone,noselect
 
+" Delay the completion popup
+let g:ncm2#complete_delay = 500
+
