@@ -31,6 +31,8 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'vivien/vim-linux-coding-style'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
