@@ -32,6 +32,7 @@ Plug 'vivien/vim-linux-coding-style'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'mileszs/ack.vim'
 
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
@@ -71,3 +72,9 @@ filetype plugin on
 
 " Setup for localvimrc loading plugin
 let g:localvimrc_persistent = 1
+
+" Setup ack.vim to use ag instead of Ack
+if executable('ag')
+	let g:ackprg = 'ag --vimgrep'
+endif
+
