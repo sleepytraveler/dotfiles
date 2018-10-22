@@ -13,9 +13,8 @@ Plug 'vim-airline/vim-airline-themes'
 " Cscope plugin that puts results in quickfix window
 Plug  'ronakg/quickr-cscope.vim'
 
-" Vim fugitive
 Plug 'tpope/vim-fugitive'
-
+Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-surround'
 
 " NERDTree - using on-demand loading

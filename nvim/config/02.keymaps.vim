@@ -1,6 +1,7 @@
-" Custom keymaps for VIM
+let mapleader = ','
 
-
+" ---------------- Language Server/Client -----------------------------
+" Custom keymaps for Language Client
 function SetLSPShortcuts()
   nnoremap <leader>ld :call LanguageClient#textDocument_definition()<CR>
   nnoremap <leader>lr :call LanguageClient#textDocument_rename()<CR>
@@ -19,7 +20,7 @@ augroup LSP
   autocmd FileType cpp,c call SetLSPShortcuts()
 augroup END
 
-" -------------- ncm2 completion plugin ---------------------------
+" -------------- ncm2 completion plugin ------------------------------
 " When the <Enter> key is pressed while the popup menu is visible, it only
 " hides the menu. Use this mapping to close the menu and also start a new
 " line.
@@ -29,5 +30,16 @@ inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-" -------------- NERDTree setup ------------------------------------
+" -------------- NERDTree setup --------------------------------------
 map <C-b> :NERDTreeToggle<CR>
+
+" -------------- fzf.vim setup ---------------------------------------
+" nmap ; :Buffers<CR>
+nmap <Leader>t :Files<CR>
+
+" -------------- Ack.vim setup ---------------------------------------
+nmap <M-k> :Ack! "\b<cword>\b" <CR>
+
+" -------------- QuickFix window navigation/manipulation -------------
+nmap \x :cclose <CR>
+
