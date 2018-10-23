@@ -19,3 +19,7 @@ let g:sublimemonokai_term_italic = 1
 " Always set the sign column/gutter instead of doing it for specific
 " plugins
 set signcolumn=yes
+
+" Highlight the current cursor line
+set cursorline
+

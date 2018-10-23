@@ -6,3 +6,5 @@ let g:LanguageClient_serverCommands = {
 			\ 'cpp': ['clangd'],
 			\ }
 
+" Disable LanguageClient Diagnostics in quickfix list
+let g:LanguageClient_diagnosticsList = "Disabled"
