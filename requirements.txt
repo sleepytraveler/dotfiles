@@ -7,4 +7,4 @@ List of tools to install as soon as new system is up
 5. tmux
 6. FZF (installed through VIM plugin)
 7. Ag
-
+8. Bear (for getting builds with make to generate compile_commands.json)

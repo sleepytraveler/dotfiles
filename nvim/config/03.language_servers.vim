@@ -2,8 +2,12 @@
 "
 let g:LanguageClient_autoStart = 1
 let g:LanguageClient_serverCommands = {
-			\ 'c': ['clangd'],
-			\ 'cpp': ['clangd'],
+			\ 'c': ['cquery',
+			\ '--log-file=/tmp/cq.log',
+			\ '--init={"cacheDirectory":"$HOME/.cache/cquery/"}'],
+			\ 'cpp': ['cquery',
+			\ '--log-file=/tmp/cq.log',
+			\ '--init={"cacheDirectory":"$HOME/.cache/cquery/"}']
 			\ }
 
 " Disable LanguageClient Diagnostics in quickfix list
