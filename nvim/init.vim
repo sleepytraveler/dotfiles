@@ -23,3 +23,6 @@ set signcolumn=yes
 " Highlight the current cursor line
 set cursorline
 
+" Set mouse mode on in tty
+set mouse=a
+
