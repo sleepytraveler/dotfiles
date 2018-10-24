@@ -11,7 +11,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Cscope plugin that puts results in quickfix window
-Plug  'ronakg/quickr-cscope.vim'
+" Plug  'ronakg/quickr-cscope.vim'
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
