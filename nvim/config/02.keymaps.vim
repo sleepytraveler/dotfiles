@@ -3,7 +3,7 @@ let mapleader = ','
 " ---------------- Language Server/Client -----------------------------
 " Custom keymaps for Language Client
 function SetLSPShortcuts()
-  nnoremap <leader>ld :call LanguageClient#textDocument_definition()<CR>
+  nnoremap <leader>ld :call LanguageClient#textDocument_definition({'gotoCmd': 'vsplit'})<CR>
   nnoremap <leader>lr :call LanguageClient#textDocument_rename()<CR>
   nnoremap <leader>lf :call LanguageClient#textDocument_formatting()<CR>
   nnoremap <leader>lt :call LanguageClient#textDocument_typeDefinition()<CR>
