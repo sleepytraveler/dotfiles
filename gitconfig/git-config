@@ -1,0 +1,8 @@
+[core]
+[user]
+	name = Vanshidhar Konda
+[push]
+	default = simple
+[alias]
+[include]
+	path = /home/vrkonda/.config/gitconfig/git-aliases
