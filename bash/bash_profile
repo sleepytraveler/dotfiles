@@ -11,3 +11,23 @@ PATH=$PATH:$HOME/.local/bin:$HOME/bin
 
 export PATH
 
+# Source proxy environment variables
+if [ -f $HOME/.config/bash/proxy_setup.sh ]; then
+	. $HOME/.config/bash/proxy_setup.sh
+fi
+
+# Source powerline configuration
+# export POWERLINE_NO_SHELL_PROMPT="TRUE"
+command -v powerline-daemon &>/dev/null
+if [ $? -eq 0 ]; then
+	POWERLINE_BASH_CONTINUATION=1
+	POWERLINE_BASH_SELECT=1
+	. $HOME/.config/bash/powerline.sh
+fi
+
+# Setup SSH agent using keychain
+if [ -f $HOME/.config/bash/keychain-setup.sh ]; then
+	. $HOME/.config/bash/keychain-setup.sh
+fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
