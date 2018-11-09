@@ -37,4 +37,4 @@ fi
 alias lr="ls -R"
 alias ll="ls -l -a -h"
 alias df="df -h"
-
+alias vim="nvim"
