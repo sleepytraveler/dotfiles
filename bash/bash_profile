@@ -25,7 +25,7 @@ fi
 #if [ $? -eq 0 ]; then
 	#POWERLINE_BASH_CONTINUATION=1
 	#POWERLINE_BASH_SELECT=1
-	#. $HOME/.config/bash/powerline.sh
+	#. $HOME/.local/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh
 #fi
 
 # Setup SSH agent using keychain
