@@ -16,14 +16,17 @@ if [ -f $HOME/.config/bash/proxy_setup.sh ]; then
 	. $HOME/.config/bash/proxy_setup.sh
 fi
 
+# ----- Disable powerline till line wrapping issue
+# is solved
+# ------------------------------------------------
 # Source powerline configuration
 # export POWERLINE_NO_SHELL_PROMPT="TRUE"
-command -v powerline-daemon &>/dev/null
-if [ $? -eq 0 ]; then
-	POWERLINE_BASH_CONTINUATION=1
-	POWERLINE_BASH_SELECT=1
-	. $HOME/.config/bash/powerline.sh
-fi
+#command -v powerline-daemon &>/dev/null
+#if [ $? -eq 0 ]; then
+	#POWERLINE_BASH_CONTINUATION=1
+	#POWERLINE_BASH_SELECT=1
+	#. $HOME/.config/bash/powerline.sh
+#fi
 
 # Setup SSH agent using keychain
 if [ -f $HOME/.config/bash/keychain-setup.sh ]; then

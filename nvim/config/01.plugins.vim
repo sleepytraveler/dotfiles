@@ -50,6 +50,8 @@ Plug 'ntpeters/vim-better-whitespace'
 
 Plug 'embear/vim-localvimrc'
 
+Plug 'simplyzhao/cscope_maps.vim'
+
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -6,3 +6,5 @@
 [alias]
 [include]
 	path = /home/vrkonda/.config/gitconfig/git-aliases
+[diff]
+	tool = vimdiff
