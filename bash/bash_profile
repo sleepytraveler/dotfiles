@@ -5,6 +5,11 @@ if [ -f $HOME/.config/bash/bashrc ]; then
 	. $HOME/.config/bash/bashrc
 fi
 
+# Override any global bashrc with local
+if [ -f $HOME/.bashrc ]; then
+	. $HOME/.bashrc
+fi
+
 # User specific environment and startup programs
 
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
