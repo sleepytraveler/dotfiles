@@ -86,24 +86,24 @@ tabspaces: 8
 font:
   # Normal (roman) font face
   normal:
-    family: monospace
+    family: Monaco for Powerline
     # The `style` can be specified to pick a specific face.
-    #style: Regular
+    style: Regular
 
   # Bold font face
   bold:
-    family: monospace
+    family: Monaco for Powerline
     # The `style` can be specified to pick a specific face.
-    #style: Bold
+    # style: Bold
 
   # Italic font face
   italic:
-    family: monospace
+    family: Monaco for Powerline
     # The `style` can be specified to pick a specific face.
-    #style: Italic
+    # style: Italic
 
   # Point size
-  size: 11.0
+  size: 12.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -122,7 +122,7 @@ font:
   # screens and make reading text a little easier.
   # On X11 it is possible to change the DPI for each instance of alacritty by using
   # `WINIT_HIDPI_FACTOR=1.0 alacritty` to scale the font.
-  scale_with_dpi: true
+  # scale_with_dpi: true
 
 # Display the time it takes to redraw each frame.
 render_timer: false
@@ -225,7 +225,7 @@ visual_bell:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 1.0
+background_opacity: 0.9
 
 # Mouse bindings
 #
