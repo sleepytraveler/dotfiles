@@ -10,12 +10,6 @@ if [ -f $HOME/.bashrc ]; then
 	. $HOME/.bashrc
 fi
 
-# User specific environment and startup programs
-
-PATH=$PATH:$HOME/.local/bin:$HOME/bin
-
-export PATH
-
 # Source proxy environment variables
 if [ -f $HOME/.config/bash/proxy_setup.sh ]; then
 	. $HOME/.config/bash/proxy_setup.sh
@@ -36,3 +30,13 @@ if [ -f $HOME/.config/bash/keychain-setup.sh ]; then
 fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# User specific environment and startup programs
+
+if [ -d $HOME/.local/bin ]; then
+	export PATH=$PATH:$HOME/.local/bin:$HOME/bin
+fi
+
+if [ -d $HOME/.cargo/bin ]; then
+	export PATH="$HOME/.cargo/bin:$PATH"
+fi
