@@ -45,3 +45,6 @@ nmap <M-F> :Ack! "\b<cword>\b" <CR>
 " -------------- QuickFix window navigation/manipulation -------------
 nmap \x :cclose <CR>
 
+" -------------- Generic shortcuts -----------------------------------
+map <Leader>cd :cd %:p:h<CR>
+
