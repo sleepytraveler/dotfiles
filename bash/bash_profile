@@ -5,11 +5,10 @@ if [ -f $HOME/.config/bash/bashrc ]; then
 	. $HOME/.config/bash/bashrc
 fi
 
-# User specific environment and startup programs
-
-PATH=$PATH:$HOME/.local/bin:$HOME/bin
-
-export PATH
+# Override any global bashrc with local
+if [ -f $HOME/.bashrc ]; then
+	. $HOME/.bashrc
+fi
 
 # Source proxy environment variables
 if [ -f $HOME/.config/bash/proxy_setup.sh ]; then
@@ -36,3 +35,12 @@ fi
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+
+# User specific environment and startup programs
+if [ -d $HOME/.local/bin ]; then
+	export PATH=$PATH:$HOME/.local/bin:$HOME/bin
+fi
+
+if [ -d $HOME/.cargo/bin ]; then
+	export PATH="$HOME/.cargo/bin:$PATH"
+fi
