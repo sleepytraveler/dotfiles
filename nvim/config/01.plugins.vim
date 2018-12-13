@@ -74,8 +74,8 @@ filetype plugin on
 " Setup for localvimrc loading plugin
 let g:localvimrc_persistent = 1
 
-" Setup ack.vim to use ag instead of Ack
-if executable('ag')
-	let g:ackprg = 'ag --vimgrep'
+" Setup ack.vim to use rg instead of Ack
+if executable('rg')
+	let g:ackprg = 'rg --vimgrep'
 endif
 
