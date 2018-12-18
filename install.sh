@@ -16,7 +16,7 @@ source $HOME/.profile
 source $HOME/.bashrc
 
 # Affter nix package manager is installed, use it to install common programs
-nix-env -i tmux neovim fish keychain
+nix-env -i tmux neovim fish keychain ripgrep fzf
 
 # Install vimplug plugin manager for neovim
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
@@ -24,6 +24,14 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 # Install tmux plugin manager - tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# Install pip packages
+if [ -x "$(command -v pip)" ]; then
+	pip install --user neovim powerline-status
+else
+	echo "pip is not installed in the user path"
+	exit 1
+fi
 
 echo "Launch tmux and install tmux plugins"
 echo "Launch Neovim and install neovim plugins"
