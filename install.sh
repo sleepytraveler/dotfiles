@@ -1,0 +1,30 @@
+# Script to do basic setup of the custom configuration that is common among my systems
+
+# Script should be run after contents of dotfiles has been copied to ~/.config
+ln -s $HOME/.config/gitconfig/git-config $HOME/.gitconfig
+ln -s $HOME/.config/bash/bash_profile $HOME/.bash_profile
+ln -s $HOME/.config/tmux/tmux.conf $HOME/.tmux.conf
+ln -s $HOME/.config/tmux $HOME/.tmux
+
+# Install nix-env
+curl https://nixos.org/nix/install | sh
+
+# Source the bash profile files again as nix installation adds
+# some lines to the bash profile
+source $HOME/.config/bash/bash_profile
+source $HOME/.profile
+source $HOME/.bashrc
+
+# Affter nix package manager is installed, use it to install common programs
+nix-env -i tmux neovim fish keychain
+
+# Install vimplug plugin manager for neovim
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# Install tmux plugin manager - tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+echo "Launch tmux and install tmux plugins"
+echo "Launch Neovim and install neovim plugins"
+
