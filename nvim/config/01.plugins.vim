@@ -79,3 +79,6 @@ if executable('rg')
 	let g:ackprg = 'rg --vimgrep'
 endif
 
+" Disable verbose for cscope - avoids having to press enter
+" when launching nvim/vim
+set nocscopeverbose
