@@ -3,7 +3,8 @@ let mapleader = ','
 " ---------------- Language Server/Client -----------------------------
 " Custom keymaps for Language Client
 function SetLSPShortcuts()
-  nnoremap <leader>ld :call LanguageClient#textDocument_definition({'gotoCmd': 'vsplit'})<CR>
+  nnoremap <leader>ld :call LanguageClient#textDocument_definition()<CR>
+  nnoremap <leader>lv :call LanguageClient#textDocument_definition({'gotoCmd': 'vsplit'})<CR>
   nnoremap <leader>lr :call LanguageClient#textDocument_rename()<CR>
   nnoremap <leader>lf :call LanguageClient#textDocument_formatting()<CR>
   nnoremap <leader>lt :call LanguageClient#textDocument_typeDefinition()<CR>
@@ -34,12 +35,16 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 map <C-b> :NERDTreeToggle<CR>
 
 " -------------- fzf.vim setup ---------------------------------------
-" nmap ; :Buffers<CR>
+nmap <Leader>; :Buffers<CR>
 nmap <Leader>t :Files<CR>
 
 " -------------- Ack.vim setup ---------------------------------------
-nmap <M-k> :Ack! "\b<cword>\b" <CR>
+nmap <M-k> :Ack! "\b<cword>\b" %:p:h <CR>
+nmap <M-F> :Ack! "\b<cword>\b" <CR>
 
 " -------------- QuickFix window navigation/manipulation -------------
 nmap \x :cclose <CR>
+
+" -------------- Generic shortcuts -----------------------------------
+map <Leader>cd :cd %:p:h<CR>
 
