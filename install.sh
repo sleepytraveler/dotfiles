@@ -35,4 +35,4 @@ fi
 
 echo "Launch tmux and install tmux plugins"
 echo "Launch Neovim and install neovim plugins"
-
+echo "Setup symbolic links to powerline-status folder in .config/fish and tmux"
