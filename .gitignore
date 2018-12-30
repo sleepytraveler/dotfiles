@@ -14,3 +14,11 @@ mimeapps*
 nvim/plugins
 tmux/plugins
 tmux/tmux-themepack
+
+# Ignore powerline-status symbolic links
+tmux/tmux-powerline
+fish/powerline
+
+# Ignore fish specific things
+fish/fishd.*
+fish/functions
