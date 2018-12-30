@@ -16,7 +16,7 @@ source $HOME/.profile
 source $HOME/.bashrc
 
 # Affter nix package manager is installed, use it to install common programs
-nix-env -i tmux neovim keychain ripgrep fzf
+nix-env -i tmux neovim keychain ripgrep fzf fish alacritty
 
 # Install vimplug plugin manager for neovim
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
