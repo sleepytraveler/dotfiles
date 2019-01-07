@@ -16,7 +16,7 @@ source $HOME/.profile
 source $HOME/.bashrc
 
 # Affter nix package manager is installed, use it to install common programs
-nix-env -i tmux neovim keychain ripgrep fzf fish alacritty cscope bear
+nix-env -i tmux neovim keychain ripgrep fzf fish alacritty cscope
 
 # Put a symoblic link to fish in $HOME/.local/bin - this is the expected
 # path to fish in tmux configuration
