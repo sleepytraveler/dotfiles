@@ -33,7 +33,7 @@ export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.g
 
 # User specific environment and startup programs
 if [ -d $HOME/.local/bin ]; then
-	export PATH=$PATH:$HOME/.local/bin
+	export PATH="$HOME/.local/bin:$PATH"
 fi
 
 if [ -d $HOME/.cargo/bin ]; then
