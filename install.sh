@@ -18,6 +18,10 @@ source $HOME/.bashrc
 # Affter nix package manager is installed, use it to install common programs
 nix-env -i tmux neovim keychain ripgrep fzf fish alacritty cscope bear
 
+# Put a symoblic link to fish in $HOME/.local/bin - this is the expected
+# path to fish in tmux configuration
+ln -s $HOME/.nix-profile/bin/fish $HOME/.local/bin/fish
+
 # Install vimplug plugin manager for neovim
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
