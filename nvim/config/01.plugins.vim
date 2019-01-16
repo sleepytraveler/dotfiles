@@ -52,6 +52,8 @@ Plug 'embear/vim-localvimrc'
 
 Plug 'simplyzhao/cscope_maps.vim'
 
+Plug 'christoomey/vim-tmux-navigator'
+
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
