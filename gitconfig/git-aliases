@@ -5,3 +5,4 @@
 	cm = commit
 	st = status
 	sh = show
+	purr = pull --rebase
