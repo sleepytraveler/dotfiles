@@ -54,6 +54,10 @@ Plug 'simplyzhao/cscope_maps.vim'
 
 Plug 'christoomey/vim-tmux-navigator'
 
+" Python plugins
+" Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'python-mode/python-mode', { 'branch': 'develop' }
+
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -89,3 +93,6 @@ nnoremap <silent> ]f :lnext<CR>
 " Disable verbose for cscope - avoids having to press enter
 " when launching nvim/vim
 set nocscopeverbose
+
+" Setup python-mode plugin to use python3 syntax by default
+let g:pymode_python = 'python3'
