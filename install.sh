@@ -7,7 +7,7 @@ ln -s $HOME/.config/tmux/tmux.conf $HOME/.tmux.conf
 ln -s $HOME/.config/tmux $HOME/.tmux
 
 # Install nix-env
-curl https://nixos.org/nix/install | sh
+# curl https://nixos.org/nix/install | sh
 
 # Source the bash profile files again as nix installation adds
 # some lines to the bash profile
@@ -15,19 +15,13 @@ source $HOME/.config/bash/bash_profile
 source $HOME/.profile
 source $HOME/.bashrc
 
-# Affter nix package manager is installed, use it to install common programs
-nix-env -i tmux neovim keychain ripgrep fzf fish alacritty cscope
-
-# Put a symoblic link to fish in $HOME/.local/bin - this is the expected
-# path to fish in tmux configuration
-ln -s $HOME/.nix-profile/bin/fish $HOME/.local/bin/fish
-
-# Install vimplug plugin manager for neovim
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-# Install tmux plugin manager - tpm
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+# Install all packages that are commonly used
+if [ -x "$(command -v pacman)" ]; then
+	pacman -Sy --noconfirm tmux neovim keychain ripgrep fzf fish alacritty cscope clang llvm
+else
+	echo "This is not an arch based distribution. Please modify install script accordingly"
+	exit 1
+fi
 
 # Install pip packages
 if [ -x "$(command -v pip)" ]; then
@@ -37,6 +31,30 @@ else
 	exit 1
 fi
 
-echo "Launch tmux and install tmux plugins"
-echo "Launch Neovim and install neovim plugins"
-echo "Setup symbolic links to powerline-status folder in .config/fish and tmux"
+# Setup symbolic links
+# Put a symoblic link to fish in $HOME/.local/bin - this is the expected
+# path to fish in tmux configuration
+ln -s /usr/bin/fish $HOME/.local/bin/fish
+
+# Install symbolic links to the pip powerline scripts
+ln -s ~/.local/lib/python3.7/site-packages/powerline/bindings/tmux ~/.config/tmux/tmux-powerline
+ln -s ~/.local/lib/python3.7/site-packages/powerline ~/.config/fish/powerline
+
+# Install all the neovim plugins
+echo "Installing neovim plugins"
+# Install vimplug plugin manager for neovim
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+nvim +PlugInstall +qall
+
+# Install the tmux plugins
+echo "Install tmux plugins"
+
+# Install tmux plugin manager - tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+tmux start-server
+tmux new-session -d
+~/.tmux/plugins/tpm/scripts/install_plugins.sh
+tmux kill-server
+
