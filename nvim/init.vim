@@ -26,3 +26,6 @@ set cursorline
 " Set mouse mode on in tty
 set mouse=a
 
+" Set smart case search
+set ignorecase
+set smartcase
