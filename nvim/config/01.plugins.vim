@@ -82,7 +82,7 @@ let g:localvimrc_persistent = 1
 
 " Setup ack.vim to use rg instead of Ack
 if executable('rg')
-	let g:ackprg = 'rg --vimgrep'
+	let g:ackprg = 'rg --vimgrep -S'
 endif
 
 set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
