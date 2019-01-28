@@ -1,5 +1,11 @@
 # .bash_profile
 
+# Source this file only if it has not already been sourced
+if [[ -v BASH_PROFILE_SOURCED ]]; then
+	echo "Bash_profile has already been sourced";
+	return 1;
+fi
+
 # Get the aliases and functions
 if [ -f $HOME/.config/bash/bashrc ]; then
 	. $HOME/.config/bash/bashrc
@@ -39,3 +45,5 @@ fi
 if [ -d $HOME/.cargo/bin ]; then
 	export PATH="$HOME/.cargo/bin:$PATH"
 fi
+
+export BASH_PROFILE_SOURCED=1
