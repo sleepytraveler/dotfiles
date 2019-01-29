@@ -15,14 +15,14 @@ source $HOME/.config/bash/bash_profile
 source $HOME/.profile
 source $HOME/.bashrc
 
-PACKAGE_LIST = "tmux neovim keychain ripgrep fzf fish alacritty cscope clang llvm"
+PACKAGE_LIST="tmux neovim keychain ripgrep fzf fish alacritty cscope clang llvm"
 
 # Install all packages that are commonly used
 if [ -x "$(command -v pacman)" ]; then
-	sudo pacman -Sy --noconfirm "$PACKAGE_LIST"
-else if [ -x "$(command -v dnf)" ]; then
+	sudo pacman -Sy --noconfirm $PACKAGE_LIST
+elif [ -x "$(command -v dnf)" ]; then
 	sudo dnf check-update
-	sudo dnf install -y "$PACKAGE_LIST"
+	sudo dnf install -y --skip-broken $PACKAGE_LIST
 else
 	echo "This is not an Arch or Fedora based distribution. Please modify install script accordingly"
 	exit 1
