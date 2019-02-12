@@ -45,7 +45,7 @@ nmap <M-F> :Ack! "\b<cword>\b" <CR>
 " -------------- Clang-format integration ----------------------------
 if filereadable(expand("/usr/share/clang/clang-format.py"))
 	map <C-K> :pyf /usr/share/clang/clang-format.py<CR>
-	imap <C-K>f :pyf /usr/share/clang/clang-format.py<CR>
+	"imap <C-K> <c-o>:pyf /usr/share/clang/clang-format.py<CR>
 end
 
 " -------------- QuickFix window navigation/manipulation -------------
