@@ -29,14 +29,17 @@ Plug 'scrooloose/nerdcommenter'
 " Linux kernel coding style plugin
 Plug 'vivien/vim-linux-coding-style'
 
+" Autoformatter for code
+Plug 'Chiel92/vim-autoformat'
+
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 
 Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
+			\ 'branch': 'next',
+			\ 'do': 'bash install.sh',
+			\ }
 Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
 Plug 'ncm2/ncm2-bufword'
@@ -63,6 +66,8 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""" Specific plugin setup """"""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable autoformatting on save
+au BufWrite * :Autoformat
 
 " vim-airline setup
 let g:airline_powerline_fonts = 1
