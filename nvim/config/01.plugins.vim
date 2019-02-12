@@ -30,7 +30,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'vivien/vim-linux-coding-style'
 
 " Autoformatter for code
-Plug 'Chiel92/vim-autoformat'
+" Plug 'Chiel92/vim-autoformat'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -67,7 +67,7 @@ call plug#end()
 """""""""""""""" Specific plugin setup """"""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable autoformatting on save
-au BufWrite * :Autoformat
+" au BufWrite * :Autoformat
 
 " vim-airline setup
 let g:airline_powerline_fonts = 1
