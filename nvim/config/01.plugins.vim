@@ -13,18 +13,20 @@ Plug 'vim-airline/vim-airline-themes'
 " Cscope plugin that puts results in quickfix window
 " Plug  'ronakg/quickr-cscope.vim'
 
+" Auto insert matching closing pair
+Plug 'jiangmiao/auto-pairs'
+
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-surround'
+" Commenting helper
+Plug 'tpope/vim-commentary'
 
 " NERDTree - using on-demand loading
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
-" Commenting helper
-Plug 'scrooloose/nerdcommenter'
-
 " Git gutter provides a diff in the gutter
-" Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 
 " Linux kernel coding style plugin
 Plug 'vivien/vim-linux-coding-style'
