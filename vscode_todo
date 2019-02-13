@@ -1,8 +1,3 @@
-Navigating panes like in VIM
-https://www.reddit.com/r/vscode/comments/8p2cob/did_anyone_here_switch_from_vim_to_vscode/e07z9kw/
-
-https://www.reddit.com/r/vscode/comments/8p2cob/did_anyone_here_switch_from_vim_to_vscode/e08egjy/
-
 Make shortcuts with <Leader> key work to match what VIM is doing
 Mimic LSP shortcuts:
 <Leader>gd : Goto Definition
@@ -10,3 +5,25 @@ Mimic LSP shortcuts:
 
 Search shortcuts:
 <Alt-k> : Search for keyword under the cursor
+
+Integration with clang-format
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Done:
+Navigating panes like in VIM
+https://www.reddit.com/r/vscode/comments/8p2cob/did_anyone_here_switch_from_vim_to_vscode/e07z9kw/
+https://www.reddit.com/r/vscode/comments/8p2cob/did_anyone_here_switch_from_vim_to_vscode/e08egjy/
+

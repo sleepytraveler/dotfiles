@@ -2,4 +2,8 @@
     "editor.fontSize": 13,
     "editor.fontFamily": "Monaco for Powerline, Consolas NF",
     "editor.fontLigatures": true,
+
+    // VIM Setup
+    "vim.normalModeKeyBindingsNonRecursive": [
+    ]
 }
