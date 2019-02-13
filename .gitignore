@@ -1,6 +1,5 @@
 gtk*
 gnome*
-evolution*
 Xauthority
 dconf
 ibus
@@ -19,6 +18,20 @@ tmux/tmux-themepack
 tmux/tmux-powerline
 fish/powerline
 
-# Ignore fish specific things
+# Ignore fish specific things that are local to a system
 fish/fishd.*
 fish/functions
+
+# Ignore the "Code" folder created by VSCode
+Code/*
+
+# Ignore libvirt, hexchat and google-chrome settings
+libvirt
+virt-viewer
+hexchat
+google-chrome*
+
+# Ignore evolution related settings
+evolution*
+enchant
+goa*
