@@ -46,4 +46,9 @@ if [ -d $HOME/.cargo/bin ]; then
 	export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
+# Add vscode to the path
+if [ -f ~/.local/vscode/code ]; then
+	export PATH="$HOME/.local/vscode:$PATH"
+fi
+
 export BASH_PROFILE_SOURCED=1
