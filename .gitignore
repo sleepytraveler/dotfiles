@@ -35,3 +35,6 @@ google-chrome*
 evolution*
 enchant
 goa*
+
+# Keep alacritty settings local to the system
+alacritty
