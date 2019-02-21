@@ -18,7 +18,7 @@ endfunction()
 
 augroup LSP
 	autocmd!
-	autocmd FileType cpp,c call SetLSPShortcuts()
+	autocmd FileType cpp,c,python call SetLSPShortcuts()
 augroup END
 
 " -------------- ncm2 completion plugin ------------------------------

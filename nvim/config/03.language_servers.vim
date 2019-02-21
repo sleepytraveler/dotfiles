@@ -4,6 +4,7 @@ let g:LanguageClient_autoStart = 1
 let g:LanguageClient_serverCommands = {
 			\ 'c': ['ccls', '--log-file=/tmp/ccls.log'],
 			\ 'cpp': ['ccls', '--log-file=/tmp/ccls.log'],
+			\ 'python': ['pyls']
 			\ }
 
 " Disable LanguageClient Diagnostics in quickfix list
