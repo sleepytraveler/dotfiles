@@ -38,3 +38,6 @@ goa*
 
 # Keep alacritty settings local to the system
 alacritty
+
+# Ignore all intel specific configurations
+intel-config
