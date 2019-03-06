@@ -1,0 +1,92 @@
+# This file contains mutt files that are common to all platforms
+
+# General settings
+
+# Quit without confirmation
+set quit
+
+# Timeout before checking for new mail
+set timeout = 30
+
+# Thread view
+set sort=threads
+
+# Required or vger will reject
+set envelope_from=yes
+
+# Display HTML email
+# Add the following two lines to a .mailcap file
+# text/html;                      links %s; nametemplate=%s.html
+# text/html;                      links -dump %s; nametemplate=%s.html; copiousoutput
+auto_view text/html
+set visual=vim
+# Make messages have sane line breaks and not
+# look like outlook chewed on your mail. Requires
+# setting the following in .vimrc "setlocal fo+=aw"
+set text_flowed=yes
+
+# wrap at word end
+set smart_wrap
+
+# Display a pager at the top which shows the surrounding
+# messages. This is totaly annoying. Get rid of it.
+set pager_index_lines= 8
+set pager_context = 3
+
+# Do not mark ALL messages read after closing
+# a mailbox
+unset mark_old
+
+# Deal with the message headers that get shown
+# Ignore all of them and hten only show the few
+# that we actually care about
+ignore *
+unignore from: to: cc: date: subject:
+
+# Make navigating the pager more sane
+bind pager <up> previous-line
+bind pager <down> next-line
+bind pager <right> next-line
+bind pager <left> previous-line
+bind pager <home> top
+bind pager <end> bottom
+
+# don't go to next message automatically
+set pager_stop
+
+# just what it says, scroll in menus
+set menu_scroll
+
+# Composing emails
+# Use vim as the editor
+set editor = vim
+# Don't add hostname to Message-Id
+unset use_domain
+# Don't add mutt version header  to message
+unset user_agent
+# Send using utf-8
+set send_charset="us-ascii:utf-8"
+# Edit header before sending
+set edit_headers=yes
+
+# Setup colors
+source ~/.config/mutt/dracula.muttrc
+source ~/.config/mutt/mutt-patch-highlighting.muttrc
+
+set sidebar_visible=yes
+set sidebar_width=30
+set sidebar_folder_indent=yes
+# set sidebar_sort_method=alpha
+set sidebar_short_path=yes
+set sidebar_divider_char=" | "
+# set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set sidebar_format = "%B%?F? [%F]?%*  %?N?%N?"
+bind index \CN sidebar-next
+bind index \CP sidebar-prev
+bind index \CO sidebar-open
+
+set mail_check_stats
+
+# Setup aliases
+# set alias_file = ~/.mutt/mailrc
+# source ~/.mutt/mailrc
