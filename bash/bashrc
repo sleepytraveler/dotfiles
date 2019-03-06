@@ -40,4 +40,4 @@ alias df="df -h"
 alias vim="nvim"
 alias cls="clear"
 
-eval $( dircolors -b $HOME/.config/bash/LS_COLORS )
+# eval $( dircolors -b $HOME/.config/bash/LS_COLORS )
