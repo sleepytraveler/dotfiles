@@ -9,3 +9,7 @@ let g:LanguageClient_serverCommands = {
 
 " Disable LanguageClient Diagnostics in quickfix list
 let g:LanguageClient_diagnosticsList = "Disabled"
+
+let g:LanguageClient_loadSettings = 1
+let g:LanguageClient_settingsPath = '/home/vrkonda/.config/nvim/settings.json'
+let g:LanguageClient_hasSnipperSupport = 0
