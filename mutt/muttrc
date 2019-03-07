@@ -2,17 +2,12 @@
 
 # General settings
 
-# Quit without confirmation
-set quit
+set quit				# Quit without confirmation
+set timeout = 30			# Timeout before checking for new mail
 
-# Timeout before checking for new mail
-set timeout = 30
+# Index settings
+set sort=threads			# Thread view
 
-# Thread view
-set sort=threads
-
-# Required or vger will reject
-set envelope_from=yes
 
 # Display HTML email
 # Add the following two lines to a .mailcap file
@@ -43,36 +38,21 @@ unset mark_old
 ignore *
 unignore from: to: cc: date: subject:
 
-# Make navigating the pager more sane
-bind pager <up> previous-line
-bind pager <down> next-line
-bind pager <right> next-line
-bind pager <left> previous-line
-bind pager <home> top
-bind pager <end> bottom
+set pager_stop				# don't go to next message automatically
+set menu_scroll				# just what it says, scroll in menus
 
-# don't go to next message automatically
-set pager_stop
-
-# just what it says, scroll in menus
-set menu_scroll
 
 # Composing emails
-# Use vim as the editor
-set editor = vim
-# Don't add hostname to Message-Id
-unset use_domain
-# Don't add mutt version header  to message
-unset user_agent
-# Send using utf-8
-set send_charset="us-ascii:utf-8"
-# Edit header before sending
-set edit_headers=yes
+set editor = vim			# Use vim as the editor
+unset use_domain			# Don't add hostname to Message-Id
+unset user_agent			# Don't add mutt version header to message
+set send_charset="us-ascii:utf-8"	# Send using utf-8
+set edit_headers=yes			# Edit header before sending
+set envelope_from=yes			# Need to setup envelope from address
+set include				# Include mssage in replies
+set forward_quote			# Include message in forwards
 
-# Setup colors
-source ~/.config/mutt/dracula.muttrc
-source ~/.config/mutt/mutt-patch-highlighting.muttrc
-
+# Sidebar settings
 set sidebar_visible=yes
 set sidebar_width=30
 set sidebar_folder_indent=yes
@@ -81,12 +61,12 @@ set sidebar_short_path=yes
 set sidebar_divider_char=" | "
 # set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
 set sidebar_format = "%B%?F? [%F]?%*  %?N?%N?"
-bind index \CN sidebar-next
-bind index \CP sidebar-prev
-bind index \CO sidebar-open
 
 set mail_check_stats
 
-# Setup aliases
-# set alias_file = ~/.mutt/mailrc
-# source ~/.mutt/mailrc
+# Setup keybindings
+source ~/.config/mutt/muttkeysrc
+
+# Setup colors
+source ~/.config/mutt/dracula.muttrc
+source ~/.config/mutt/mutt-patch-highlighting.muttrc

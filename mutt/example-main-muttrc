@@ -1,0 +1,38 @@
+# Mutt manual: http://www.mutt.org/doc/manual/
+# See section 6 for most things.
+
+# Import common settings file
+source ~/.config/mutt/muttrc
+
+# Basic info
+set certificate_file=~/.mutt/mutt_certs
+set folder=""				# Set IMAP address
+set smtp_url=""				# Set SMTP address
+set realname="Vanshidhar Konda"
+set from="""
+set spoolfile=+INBOX
+mailboxes = +INBOX			# Add all the mailboxes/folders to show
+mailboxes = "=Drafts"
+mailboxes = "=Sent Items"
+# set imap_check_subscribed="yes"
+# set imap_list_subscribed="yes"
+
+# Set keepalive
+set imap_keepalive = 300
+set mail_check = 30
+set ssl_starttls = yes
+
+# Save sent mail so it shows up in Outlook and
+# gets archived by mail clouid
+set record="=Sent Items"
+set postponed = "=Drafts"
+
+# Setup caches
+set header_cache=~/.mutt/header-cache
+set message_cachedir = ~/.mutt/body-cache
+set mailcap_path = ~/.config/mutt/mailcap
+set tmpdir = ~/.mutt/tmp
+
+# Setup mail aliases
+set alias_file=~/.mutt/mail_aliases
+source ~/.mutt/mail_aliases
