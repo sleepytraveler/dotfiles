@@ -33,3 +33,7 @@ bind pager \CO sidebar-open
 # Composing emails
 bind index p recall-message
 bind compose p postpone-message
+
+# Collapse threads
+bind index - collapse-thread
+bind index _ collapse-all

@@ -7,7 +7,12 @@ set timeout = 30			# Timeout before checking for new mail
 
 # Index settings
 set sort=threads			# Thread view
-
+set strict_threads
+unset collapse_unread			# Don't collapse threads with unread messages
+# Pager settings
+set pipe_decode				# Strip headers and eval mimes when piping
+set thorough_search			# String headers and eval mimes before searching
+set mail_check_stats
 
 # Display HTML email
 # Add the following two lines to a .mailcap file
@@ -18,7 +23,7 @@ set visual=vim
 # Make messages have sane line breaks and not
 # look like outlook chewed on your mail. Requires
 # setting the following in .vimrc "setlocal fo+=aw"
-set text_flowed=yes
+set text_flowed
 
 # wrap at word end
 set smart_wrap
@@ -47,22 +52,28 @@ set editor = vim			# Use vim as the editor
 unset use_domain			# Don't add hostname to Message-Id
 unset user_agent			# Don't add mutt version header to message
 set send_charset="us-ascii:utf-8"	# Send using utf-8
-set edit_headers=yes			# Edit header before sending
-set envelope_from=yes			# Need to setup envelope from address
+set edit_headers			# Edit header before sending
+set envelope_from			# Need to setup envelope from address
 set include				# Include mssage in replies
 set forward_quote			# Include message in forwards
+set abort_nosubject			# Abort sending email if no subject provided
+set abort_unmodified			# Abort sending unmodified message
 
 # Sidebar settings
-set sidebar_visible=yes
+set sidebar_visible
 set sidebar_width=30
-set sidebar_folder_indent=yes
+set sidebar_folder_indent
 # set sidebar_sort_method=alpha
-set sidebar_short_path=yes
+set sidebar_short_path
 set sidebar_divider_char=" | "
 # set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
 set sidebar_format = "%B%?F? [%F]?%*  %?N?%N?"
-
-set mail_check_stats
+color sidebar_indicator default color17  # Dark blue background
+color sidebar_highlight white	color238 # Grey background
+color sidebar_spoolfile yellow  default	 # Yellow
+color sidebar_flagged	red	default  # Red
+color sidebar_divider   color8  default  # Dark Grey
+color sidebar_new 	brightblue default
 
 # Setup keybindings
 source ~/.config/mutt/muttkeysrc
