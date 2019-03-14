@@ -103,3 +103,19 @@ set nocscopeverbose
 
 " Setup python-mode plugin to use python3 syntax by default
 let g:pymode_python = 'python3'
+
+" Remove the pymode colorcolumn setting and mark the columns
+" above 80 as error
+let g:pymode_options_colorcolumn = 0
+
+autocmd BufEnter *.py :call s:PythonHighlighting()
+
+function s:PythonHighlighting()
+	highlight default link PyError ErrorMsg
+
+	syn match PyError / \+\ze\t/			"spaces before tab
+	syn match PyError /\%>80v[^()\{\}\[\]<>]\+/ 	" virtual column 81 and more
+
+	autocmd InsertEnter * match PyError /\s\+\%#\@<!$/
+	autocmd InsertLeave * match PyError /\s\+$/
+endfunction
