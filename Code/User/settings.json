@@ -1,6 +1,5 @@
 {
-    "editor.fontSize": 12,
-    "editor.fontFamily": "Monaco for Powerline, Consolas NF",
+    "editor.fontFamily": "\"Consolas NF\"",
     "editor.fontLigatures": true,
 
     // VIM Setup
@@ -15,6 +14,31 @@
             "before": ["<C-n>"],
             "commands": [":nohl"]
         },
+        {
+            "before": ["<leader>", "l", "d"],
+            "commands": ["C_Cpp.GoToDeclaration"]
+        },
+        {
+            "before": ["<leader>", "l", "x"],
+            "commands": ["references-view.find"]
+        },
+        {
+            "before": ["<C-o>"],
+            "commands": ["workbench.action.navigateBack"]
+        },
+        {
+            "before": ["<C-i>"],
+            "commands": ["workbench.action.navigateForward"]
+        }
     ],
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "Monokai Pro Icons",
+    "workbench.colorTheme": "Monokai Pro",
+    "editor.fontSize": 16,
+    "editor.minimap.enabled": false,
+    "window.zoomLevel": 0,
+    "editor.insertSpaces": false,
+    "editor.cursorStyle": "block-outline",
+    "editor.renderWhitespace": "none",
+    "editor.tabSize": 8,
+    "workbench.editor.enablePreviewFromQuickOpen": false
 }
