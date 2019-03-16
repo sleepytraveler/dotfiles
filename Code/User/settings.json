@@ -1,6 +1,18 @@
 {
-    "editor.fontFamily": "\"Consolas NF\"",
+    // Editor specific settings
+    "editor.fontFamily": "\"Monaco for Powerline\"",
     "editor.fontLigatures": true,
+    "editor.minimap.enabled": false,
+    "editor.fontSize": 13,
+    "editor.formatOnType": true,
+
+    "diffEditor.ignoreTrimWhitespace": false,
+
+    // Workbench setup
+    "workbench.iconTheme": "Monokai Pro Icons",
+    "workbench.colorTheme": "Monokai Pro",
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "window.zoomLevel": 0,
 
     // VIM Setup
     "vim.leader": ",",
@@ -29,16 +41,33 @@
         {
             "before": ["<C-i>"],
             "commands": ["workbench.action.navigateForward"]
+        },
+        {
+            "before": ["u"],
+            "commands": ["undo"]
         }
     ],
-    "workbench.iconTheme": "Monokai Pro Icons",
-    "workbench.colorTheme": "Monokai Pro",
-    "editor.fontSize": 16,
-    "editor.minimap.enabled": false,
-    "window.zoomLevel": 0,
-    "editor.insertSpaces": false,
-    "editor.cursorStyle": "block-outline",
-    "editor.renderWhitespace": "none",
-    "editor.tabSize": 8,
-    "workbench.editor.enablePreviewFromQuickOpen": false
+
+    // Language specific settings
+    "[c]": {
+        "editor.insertSpaces": false,
+        "editor.cursorStyle": "block-outline",
+        "editor.renderWhitespace": "none",
+        "editor.tabSize": 8,
+    },
+
+    // Python specific settings
+    "[python]": {
+        "editor.insertSpaces": true,
+        "editor.cursorStyle": "block-outline",
+        "editor.renderWhitespace": "none",
+        "editor.tabSize": 4,
+    },
+
+    "python.jediEnabled": false,
+    "python.pythonPath": "/usr/bin/python3", // default to python3 unless overriden
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.linting.pep8Enabled": true,
+    "python.formatting.provider": "autopep8"
 }
