@@ -46,6 +46,7 @@
         "editor.cursorStyle": "block-outline",
         "editor.renderWhitespace": "none",
         "editor.tabSize": 8,
+        "editor.formatOnType": true
     },
 
     // Python specific settings
@@ -53,7 +54,7 @@
         "editor.insertSpaces": true,
         "editor.cursorStyle": "block-outline",
         "editor.renderWhitespace": "none",
-        "editor.tabSize": 4,
+        "editor.formatOnType": true,
     },
 
     "python.jediEnabled": false,
