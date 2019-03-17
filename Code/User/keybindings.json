@@ -30,4 +30,16 @@
         "key": "\\ x",
         "command": "search.action.clearSearchResults",
     },
+    {
+        "command": "extension.goto-symbol-stack.goPrevOnStack",
+        "key": "ctrl-o"
+    },
+    {
+        "command": "extension.goto-symbol-stack.goNextOnStack",
+        "key": "ctrl-i"
+    },
+    {
+        "command": "extension.goto-symbol-stack.goToSearchSymbolDeclaration",
+        "key": "alt+t"
+    }
 ]

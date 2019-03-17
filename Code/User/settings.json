@@ -28,7 +28,7 @@
         },
         {
             "before": ["<leader>", "l", "d"],
-            "commands": ["C_Cpp.GoToDeclaration"]
+            "commands": ["extension.goto-symbol-stack.goToSymbolDeclaration"]
         },
         {
             "before": ["<leader>", "l", "x"],
