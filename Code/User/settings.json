@@ -9,8 +9,8 @@
     "diffEditor.ignoreTrimWhitespace": false,
 
     // Workbench setup
-    "workbench.iconTheme": "Monokai Pro Icons",
-    "workbench.colorTheme": "Monokai Pro",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Monokai",
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "window.zoomLevel": 0,
 
