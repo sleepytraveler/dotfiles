@@ -5,7 +5,7 @@
     "editor.minimap.enabled": false,
     "editor.fontSize": 13,
     "editor.formatOnType": true,
-
+    "editor.cursorBlinking": "solid",
     "diffEditor.ignoreTrimWhitespace": false,
 
     // Workbench setup
@@ -62,5 +62,7 @@
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
     "python.linting.pep8Enabled": true,
-    "python.formatting.provider": "autopep8"
+    "python.formatting.provider": "autopep8",
+    "gitlens.views.repositories.files.layout": "list",
+    "explorer.confirmDelete": false
 }
