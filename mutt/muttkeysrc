@@ -26,7 +26,7 @@ bind index \CN sidebar-next
 bind index \CP sidebar-prev
 bind pager \CO sidebar-open
 bind pager \CP sidebar-prev
-bind pager \CO sidebar-open
+bind pager \CN sidebar-next
 
 # Composing emails
 bind index p recall-message
@@ -35,3 +35,9 @@ bind compose p postpone-message
 # Collapse threads
 bind index - collapse-thread
 bind index _ collapse-all
+
+# Marcos for operating on messages
+# From https://brianbuccola.com/how-to-mark-all-emails-as-read-in-mutt/
+macro index A \
+    "<tag-pattern>~N<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>$" \
+    "mark all new as read"
