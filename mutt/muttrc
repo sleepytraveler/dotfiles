@@ -2,7 +2,7 @@
 
 # General settings
 
-set quit				# Quit without confirmation
+set quit=ask-yes			# Quit only after asking 
 set timeout = 30			# Timeout before checking for new mail
 
 # Index settings
