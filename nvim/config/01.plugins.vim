@@ -38,14 +38,15 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 
-Plug 'autozimu/LanguageClient-neovim', {
-			\ 'branch': 'next',
-			\ 'do': 'bash install.sh',
-			\ }
-Plug 'ncm2/ncm2'
-Plug 'roxma/nvim-yarp'
-Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-path'
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install() }}
+" Plug 'autozimu/LanguageClient-neovim', {
+" 			\ 'branch': 'next',
+" 			\ 'do': 'bash install.sh',
+" 			\ }
+" Plug 'ncm2/ncm2'
+" Plug 'roxma/nvim-yarp'
+" Plug 'ncm2/ncm2-bufword'
+" Plug 'ncm2/ncm2-path'
 "Plug 'ncm2/ncm2-pyclang'
 
 "Molokai colorscheme

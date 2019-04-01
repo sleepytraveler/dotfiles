@@ -4,11 +4,11 @@
 "
 
 " Enable ncm2 for all buffers
-autocmd BufEnter * call ncm2#enable_for_buffer()
+" autocmd BufEnter * call ncm2#enable_for_buffer()
 
-" Set completion options
-set completeopt=noinsert,menuone,noselect
+" " Set completion options
+" set completeopt=noinsert,menuone,noselect
 
-" Delay the completion popup
-let g:ncm2#complete_delay = 500
+" " Delay the completion popup
+" let g:ncm2#complete_delay = 500
 

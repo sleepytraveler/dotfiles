@@ -1,40 +1,32 @@
 let mapleader = ','
 
-" ---------------- Language Server/Client -----------------------------
-" Custom keymaps for Language Client
-function SetLSPShortcuts()
-	nnoremap <leader>ld :call LanguageClient#textDocument_definition()<CR>
-	nnoremap <leader>lv :call LanguageClient#textDocument_definition({'gotoCmd': 'vsplit'})<CR>
-	nnoremap <leader>lr :call LanguageClient#textDocument_rename()<CR>
-	nnoremap <leader>lf :call LanguageClient#textDocument_formatting()<CR>
-	nnoremap <leader>lt :call LanguageClient#textDocument_typeDefinition()<CR>
-	nnoremap <leader>lx :call LanguageClient#textDocument_references({'includeDeclaration': v:false})<CR>
-	nnoremap <leader>la :call LanguageClient_workspace_applyEdit()<CR>
-	nnoremap <leader>lc :call LanguageClient#textDocument_completion()<CR>
-	nnoremap <leader>lh :call LanguageClient#textDocument_hover()<CR>
-	nnoremap <leader>ls :call LanguageClient_textDocument_documentSymbol()<CR>
-	nnoremap <leader>lm :call LanguageClient_contextMenu()<CR>
-	nnoremap <leader>li :call LanguageClient#textDocument_documentHighlight()<CR>
-	nnoremap <leader>lq :call LanguageClient_workspace_symbol(input('Enter search term: '))<CR>
-endfunction()
+" CoC keymaps
+inoremap <silent><expr> <c-space> coc#refresh()
+nmap <Leader>ld	<Plug>(coc-definition)
+nmap <Leader>lx <Plug>(coc-references)
+nmap <Leader>lt <Plug>(coc-codelens-action)
+vmap <Leader>lf <Plug>(coc-format-selected)
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-augroup LSP
-	autocmd!
-	autocmd FileType cpp,c,python call SetLSPShortcuts()
-augroup END
+" Use K for show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
 
-" -------------- ncm2 completion plugin ------------------------------
-" When the <Enter> key is pressed while the popup menu is visible, it only
-" hides the menu. Use this mapping to close the menu and also start a new
-" line.
-inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
+function! s:show_documentation()
+  if &filetype == 'vim'
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
 
-" Use <TAB> to select the popup menu:
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-" -------------- NERDTree setup --------------------------------------
-map <C-b> :NERDTreeToggle<CR>
+" Highlight symbol under cursor on CursorHold
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " -------------- fzf.vim setup ---------------------------------------
 nmap <Leader>; :Buffers<CR>
@@ -45,10 +37,10 @@ nmap <M-k> :Ack! "\b<cword>\b" %:p:h <CR>
 nmap <M-F> :Ack! "\b<cword>\b" <CR>
 
 " -------------- Clang-format integration ----------------------------
-if filereadable(expand("/usr/share/clang/clang-format.py"))
-	map <C-K> :pyf /usr/share/clang/clang-format.py<CR>
-	"imap <C-K> <c-o>:pyf /usr/share/clang/clang-format.py<CR>
-end
+"if filereadable(expand("/usr/share/clang/clang-format.py"))
+"	map <C-K> :pyf /usr/share/clang/clang-format.py<CR>
+"	"imap <C-K> <c-o>:pyf /usr/share/clang/clang-format.py<CR>
+"end
 
 " -------------- QuickFix window navigation/manipulation -------------
 nmap \x :cclose <CR>
