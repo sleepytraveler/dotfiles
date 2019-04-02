@@ -36,6 +36,10 @@ else
 	exit 1
 fi
 
+# Install node and yarn
+curl -sL install-node.now.sh/lts | sh
+curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
+
 # Setup symbolic links
 # Put a symoblic link to fish in $HOME/.local/bin - this is the expected
 # path to fish in tmux configuration

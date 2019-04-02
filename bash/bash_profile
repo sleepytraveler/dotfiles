@@ -46,6 +46,10 @@ if [ -d $HOME/.cargo/bin ]; then
 	export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
+if [ -d $HOME/.yarn/bin ]; then
+	export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+fi
+
 # Add vscode to the path
 if [ -f ~/.local/vscode/code ]; then
 	export PATH="$HOME/.local/vscode:$PATH"
