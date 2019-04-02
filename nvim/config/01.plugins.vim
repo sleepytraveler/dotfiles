@@ -120,3 +120,11 @@ function s:PythonHighlighting()
 	autocmd InsertEnter * match PyError /\s\+\%#\@<!$/
 	autocmd InsertLeave * match PyError /\s\+$/
 endfunction
+
+" Settings for coc.nvim
+" See https://github.com/neoclide/coc.nvim for more details
+set hidden
+set cmdheight=2		" better display for messages
+set updatetime=300	" Smaller update time for CursorHold & CursorHoldI
+set shortmess+=c	" don't give |ins-completion-menu| messages
+
