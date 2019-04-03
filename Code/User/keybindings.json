@@ -27,10 +27,6 @@
         "command": "workbench.action.navigateDown"
     },
     {
-        "key": "\\ x",
-        "command": "search.action.clearSearchResults",
-    },
-    {
         "command": "extension.goto-symbol-stack.goPrevOnStack",
         "key": "ctrl-o"
     },

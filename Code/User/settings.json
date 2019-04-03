@@ -37,7 +37,11 @@
         {
             "before": ["u"],
             "commands": ["undo"]
-        }
+        },
+        {
+            "before": ["\\", "x"],
+            "commands": ["search.action.clearSearchResults"]
+        },
     ],
 
     // Language specific settings
