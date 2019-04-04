@@ -19,7 +19,7 @@
 			],
 			"initializationOptions": {
 				"cache": {
-					"directory": "~/.cache/ccls"
+					"directory": "/home/vrkonda/.cache/ccls"
 				}
 			}
 		}
