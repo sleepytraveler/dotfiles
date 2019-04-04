@@ -3,6 +3,7 @@ let mapleader = ','
 " CoC keymaps
 inoremap <silent><expr> <c-space> coc#refresh()
 nmap <Leader>ld	<Plug>(coc-definition)
+nmap <Leader>lv :call CocAction('jumpDefinition', 'vsplit')<CR>
 nmap <Leader>lx <Plug>(coc-references)
 nmap <Leader>li <Plug>(coc-implementation)
 vmap <Leader>lf <Plug>(coc-format-selected)
