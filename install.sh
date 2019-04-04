@@ -25,19 +25,18 @@ elif [ -x "$(command -v dnf)" ]; then
 	sudo dnf install -y --skip-broken $PACKAGE_LIST
 else
 	echo "This is not an Arch or Fedora based distribution. Please modify install script accordingly"
-	exit 1
 fi
 
 # Install pip packages
 if [ -x "$(command -v pip)" ]; then
-	pip install --user neovim powerline-status 'python-language-server[all]'
+	pip install --user neovim powerline-status
 else
 	echo "pip is not installed in the user path"
 	exit 1
 fi
 
 # Install node and yarn
-curl -sL install-node.now.sh/lts | sh
+curl -sL install-node.now.sh/lts | sudo sh
 curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 
 # Setup symbolic links
