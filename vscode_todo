@@ -1,7 +1,14 @@
-Make shortcuts with <Leader> key work to match what VIM is doing
 Mimic LSP shortcuts:
-<Leader>gd : Goto Definition
-<Leader>gv : Goto Definition (Open in new vertical pane)
+<Leader>ld : Goto Definition
+<Leader>lv : Goto Definition (Open in new vertical pane)
+<Leader>ls : Goto Definition (Open in horizontal split)
+
+Additional keymaps to add
+Toggle explorer
+Toggle search
+Close current buffer
+Goto specific buffer
+Trigger documentation in preview
 
 Search shortcuts:
 <Alt-k> : Search for keyword under the cursor
@@ -26,4 +33,5 @@ Done:
 Navigating panes like in VIM
 https://www.reddit.com/r/vscode/comments/8p2cob/did_anyone_here_switch_from_vim_to_vscode/e07z9kw/
 https://www.reddit.com/r/vscode/comments/8p2cob/did_anyone_here_switch_from_vim_to_vscode/e08egjy/
+Make shortcuts with <Leader> key work to match what VIM is doing
 
