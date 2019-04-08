@@ -31,6 +31,14 @@
             "commands": ["extension.goto-symbol-stack.goToSymbolDeclaration"]
         },
         {
+            "before": ["<leader>", "l", "p"],
+            "commands": ["editor.action.peekDefinition"]
+        },
+        {
+            "before": ["K"],
+            "commands": ["editor.action.showHover"]
+        },
+        {
             "before": ["<leader>", "l", "x"],
             "commands": ["references-view.find"]
         },
