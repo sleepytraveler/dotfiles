@@ -47,6 +47,10 @@
             "commands": ["undo"]
         },
         {
+            "before": ["<C-r>"],
+            "commands": ["redo"]
+        },
+        {
             "before": ["\\", "x"],
             "commands": ["search.action.clearSearchResults"]
         },
