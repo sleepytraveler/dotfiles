@@ -31,14 +31,7 @@ fi
 # to display the separator correctly. Then finally reset all colors and effects
 #PS1+="${prompt_bg_color} $ ${prompt_fg_color}${shell_default_bg}${bg_separator}\e[0m"
 
-# Aliases ------------------------------------------
-
-# Two letter alias for recursively listing all files
-alias lr="ls -R"
-alias ll="ls -l -a -h"
-alias df="df -h"
-alias vim="nvim"
-alias cls="clear"
-
 # eval $( dircolors -b $HOME/.config/bash/LS_COLORS )
-alias config='/usr/bin/git --git-dir=/home/vrkonda/.config/.git --work-tree=/home/vrkonda/.config'
+if [ -f $HOME/.config/fish/conf.d/aliases.fish ]; then
+	. $HOME/.config/fish/conf.d/aliases.fish
+fi
