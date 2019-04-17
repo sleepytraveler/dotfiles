@@ -15,6 +15,10 @@ source $HOME/.config/bash/bash_profile
 source $HOME/.profile
 source $HOME/.bashrc
 
+# Setup sourcing of bash_profile and bashrc in bashrc
+echo ". $HOME/.config/bash/bash_profile" >> $HOME/.bashrc
+echo ". $HOME/.config/bash/bashrc" >> $HOME/.bashrc
+
 PACKAGE_LIST="tmux neovim keychain ripgrep fzf fish alacritty cscope clang llvm"
 
 # Install all packages that are commonly used

@@ -6,15 +6,15 @@ if [[ -v BASH_PROFILE_SOURCED ]]; then
 	return 1;
 fi
 
-# Get the aliases and functions
-if [ -f $HOME/.config/bash/bashrc ]; then
-	. $HOME/.config/bash/bashrc
-fi
+# # Get the aliases and functions
+# if [ -f $HOME/.config/bash/bashrc ]; then
+# 	. $HOME/.config/bash/bashrc
+# fi
 
-# Source proxy environment variables
-if [ -f $HOME/.config/bash/proxy_setup.sh ]; then
-	. $HOME/.config/bash/proxy_setup.sh
-fi
+# # Source proxy environment variables
+# if [ -f $HOME/.config/bash/proxy_setup.sh ]; then
+# 	. $HOME/.config/bash/proxy_setup.sh
+# fi
 
 # ----- Disable powerline till line wrapping issue
 # is solved
