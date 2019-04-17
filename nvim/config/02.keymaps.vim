@@ -53,7 +53,7 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " -------------- fzf.vim setup ---------------------------------------
 nmap <Leader>; :Buffers<CR>
-nmap <Leader>t :Files<CR>
+nmap <Leader>t :GFiles<CR>
 
 " -------------- Ack.vim setup ---------------------------------------
 nmap <M-k> :Ack! "\b<cword>\b" %:p:h <CR>
