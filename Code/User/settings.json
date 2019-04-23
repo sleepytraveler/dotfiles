@@ -80,5 +80,6 @@
     "python.linting.pep8Enabled": true,
     "python.formatting.provider": "autopep8",
     "gitlens.views.repositories.files.layout": "list",
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "C_Cpp.updateChannel": "Insiders"
 }
