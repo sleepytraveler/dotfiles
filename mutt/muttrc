@@ -67,6 +67,9 @@ set sidebar_folder_indent
 set sidebar_short_path
 set sidebar_divider_char=" | "
 # set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+# sidebar_format = %B - name of mailbox
+# 		   %F - Number of flagged messages
+# 		   %N - Number of unread messages in the mailbox
 set sidebar_format = "%B%?F? [%F]?%*  %?N?%N?"
 color sidebar_indicator default color17  # Dark blue background
 color sidebar_highlight white	color238 # Grey background
