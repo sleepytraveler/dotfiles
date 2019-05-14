@@ -1,0 +1,3 @@
+# Limit the number of commits loaded by default
+set main-options = -n 1000
+
