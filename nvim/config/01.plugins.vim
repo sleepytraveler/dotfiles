@@ -64,6 +64,8 @@ Plug 'christoomey/vim-tmux-navigator'
 " Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
 
+Plug 'chaoren/vim-wordmotion'
+
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
