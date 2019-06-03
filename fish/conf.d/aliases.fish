@@ -5,7 +5,7 @@ alias ll="ls -l -a -h"
 alias df="df -h"
 alias vim="nvim"
 alias cls="clear"
-
+alias mutt="neomutt -F ~/.mutt/muttrc"
 alias grep="grep --color=always"
 alias less="less -r "
 
