@@ -13,6 +13,10 @@ colorscheme sublimemonokai
 syntax enable
 let g:sublimemonokai_term_italic = 1
 
+" set highlight colors
+set hlsearch
+hi Search guibg=peru guifg=wheat
+
 " Set a dark background
 " set background=dark
 
@@ -29,3 +33,4 @@ set mouse=a
 " Set smart case search
 set ignorecase
 set smartcase
+
