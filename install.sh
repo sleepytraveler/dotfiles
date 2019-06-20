@@ -52,6 +52,10 @@ ln -s /usr/bin/fish $HOME/.local/bin/fish
 ln -s ~/.local/lib/python3.7/site-packages/powerline/bindings/tmux ~/.config/tmux/tmux-powerline
 ln -s ~/.local/lib/python3.7/site-packages/powerline ~/.config/fish/powerline
 
+# Install pure theme for fish
+curl git.io/pure-fish --output /tmp/pure_installer.fish --location --silent
+source /tmp/pure_installer.fish; and install_pure
+
 # Install all the neovim plugins
 echo "Installing neovim plugins"
 # Install vimplug plugin manager for neovim
