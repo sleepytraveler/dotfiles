@@ -6,13 +6,14 @@
     "editor.fontSize": 13,
     "editor.formatOnType": true,
     "editor.cursorBlinking": "solid",
+    "editor.lineNumbers": "relative",
     "diffEditor.ignoreTrimWhitespace": false,
 
     // Workbench setup
     "workbench.iconTheme": "vscode-icons",
-    "workbench.colorTheme": "Monokai",
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "window.zoomLevel": 0,
+    "workbench.settings.editor": "json",
 
     // VIM Setup
     "vim.leader": ",",
@@ -21,6 +22,7 @@
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": true,
     "vim.hlsearch": true,
+    "vim.camelCaseMotion.enable": true,
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": ["<C-n>"],
@@ -54,6 +56,14 @@
             "before": ["\\", "x"],
             "commands": ["search.action.clearSearchResults"]
         },
+        {
+            "before": ["w"],
+            "after": ["<leader>", "w"]
+        },
+        {
+            "before": ["b"],
+            "after": ["<leader>", "b"]
+        },
     ],
 
     // Language specific settings
@@ -81,5 +91,6 @@
     "python.formatting.provider": "autopep8",
     "gitlens.views.repositories.files.layout": "list",
     "explorer.confirmDelete": false,
-    "C_Cpp.updateChannel": "Insiders"
+    "C_Cpp.updateChannel": "Insiders",
+    "workbench.colorTheme": "Atom One Dark"
 }
