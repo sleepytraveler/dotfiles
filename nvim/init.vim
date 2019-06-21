@@ -5,6 +5,7 @@ for conf_file in split(glob('~/.config/nvim/config/*.vim'), '\n')
 endfor
 
 " Enable line numbers and column numbers
+set relativenumber
 set number
 set ruler
 
