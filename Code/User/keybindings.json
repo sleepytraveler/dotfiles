@@ -20,11 +20,23 @@
     },
     {
         "key": "ctrl+k",
-        "command": "workbench.action.navigateUp"
+        "command": "workbench.action.navigateUp",
+        "when": "editorTextFocus"
     },
     {
         "key": "ctrl+j",
-        "command": "workbench.action.navigateDown"
+        "command": "workbench.action.navigateDown",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "search.action.focusPreviousSearchResult",
+        "when": "searchViewletVisible"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "search.action.focusNextSearchResult",
+        "when": "searchViewletVisible"
     },
     {
         "command": "extension.goto-symbol-stack.goPrevOnStack",
@@ -37,5 +49,13 @@
     {
         "command": "extension.goto-symbol-stack.goToSearchSymbolDeclaration",
         "key": "alt+t"
+    },
+    {
+        "key": "\\ b",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "\\ x",
+        "command": "search.action.clearSearchResults",
     }
 ]
