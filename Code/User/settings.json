@@ -30,7 +30,7 @@
         },
         {
             "before": ["<leader>", "l", "d"],
-            "commands": ["extension.goto-symbol-stack.goToSymbolDeclaration"]
+            "commands": ["editor.action.revealDefinition"]
         },
         {
             "before": ["<leader>", "l", "p"],
@@ -55,6 +55,10 @@
         {
             "before": ["\\", "x"],
             "commands": ["search.action.clearSearchResults"]
+        },
+        {
+            "before": ["\\", "b"],
+            "commands": ["workbench.action.toggleSidebarVisibility"]
         },
         {
             "before": ["w"],

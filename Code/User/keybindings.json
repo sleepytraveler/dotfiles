@@ -38,24 +38,16 @@
         "command": "search.action.focusNextSearchResult",
         "when": "searchViewletVisible"
     },
-    {
-        "command": "extension.goto-symbol-stack.goPrevOnStack",
-        "key": "ctrl-o"
-    },
-    {
-        "command": "extension.goto-symbol-stack.goNextOnStack",
-        "key": "ctrl-i"
-    },
+    //{
+    //     "command": "extension.goto-symbol-stack.goPrevOnStack",
+    //     "key": "ctrl-o"
+    // },
+    // {
+    //     "command": "extension.goto-symbol-stack.goNextOnStack",
+    //     "key": "ctrl-i"
+    //},
     {
         "command": "extension.goto-symbol-stack.goToSearchSymbolDeclaration",
         "key": "alt+t"
     },
-    {
-        "key": "\\ b",
-        "command": "workbench.action.toggleSidebarVisibility"
-    },
-    {
-        "key": "\\ x",
-        "command": "search.action.clearSearchResults",
-    }
 ]
