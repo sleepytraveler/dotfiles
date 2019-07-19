@@ -46,8 +46,8 @@
     //     "command": "extension.goto-symbol-stack.goNextOnStack",
     //     "key": "ctrl-i"
     //},
-    {
-        "command": "extension.goto-symbol-stack.goToSearchSymbolDeclaration",
-        "key": "alt+t"
-    },
+    // {
+    //     "command": "extension.goto-symbol-stack.goToSearchSymbolDeclaration",
+    //     "key": "alt+t"
+    // },
 ]

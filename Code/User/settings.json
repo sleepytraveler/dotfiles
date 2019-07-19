@@ -61,6 +61,10 @@
             "commands": ["workbench.action.toggleSidebarVisibility"]
         },
         {
+            "before": ["\\", "j"],
+            "commands": ["workbench.action.togglePanel"]
+        },
+        {
             "before": ["w"],
             "after": ["<leader>", "w"]
         },
@@ -96,5 +100,6 @@
     "gitlens.views.repositories.files.layout": "list",
     "explorer.confirmDelete": false,
     "C_Cpp.updateChannel": "Insiders",
-    "workbench.colorTheme": "Atom One Dark"
+    "workbench.colorTheme": "Atom One Dark",
+    "editor.renderControlCharacters": true
 }
