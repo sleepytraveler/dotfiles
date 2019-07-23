@@ -14,6 +14,7 @@
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "window.zoomLevel": 0,
     "workbench.settings.editor": "json",
+    "workbench.editor.revealIfOpen": true,
 
     // VIM Setup
     "vim.leader": ",",
@@ -72,6 +73,16 @@
             "before": ["b"],
             "after": ["<leader>", "b"]
         },
+        {
+            "before": ["]", "c"],
+            "commands": ["workbench.action.editor.nextChange"],
+            "when": "editorTextFocus"
+        },
+        {
+            "before": ["[", "c"],
+            "commands": ["workbench.action.editor.previousChange"],
+            "when": "editorTextFocus"
+        }
     ],
 
     // Language specific settings
