@@ -55,7 +55,9 @@
         },
         {
             "before": ["\\", "x"],
-            "commands": ["search.action.clearSearchResults"]
+            "commands": ["search.action.clearSearchResults",
+                 "workbench.action.toggleSidebarVisibility"],
+            "when": "searchViewletVisible"
         },
         {
             "before": ["\\", "b"],
