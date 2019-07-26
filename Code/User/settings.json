@@ -114,5 +114,7 @@
     "explorer.confirmDelete": false,
     "C_Cpp.updateChannel": "Insiders",
     "workbench.colorTheme": "Atom One Dark",
-    "editor.renderControlCharacters": true
+    "editor.renderControlCharacters": true,
+
+    "search.usePCRE2": true
 }
