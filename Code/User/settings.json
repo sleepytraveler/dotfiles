@@ -5,6 +5,7 @@
     "editor.minimap.enabled": false,
     "editor.fontSize": 13,
     "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
     "editor.cursorBlinking": "solid",
     "editor.lineNumbers": "relative",
     "diffEditor.ignoreTrimWhitespace": false,
