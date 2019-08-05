@@ -1,6 +1,7 @@
 # Script to do basic setup of the custom configuration that is common among my systems
+cp -r ./* $HOME/.config/
+cd $HOME/.config
 
-# Script should be run after contents of dotfiles has been copied to ~/.config
 ln -s $HOME/.config/gitconfig/git-config $HOME/.gitconfig
 ln -s $HOME/.config/bash/bash_profile $HOME/.bash_profile
 ln -s $HOME/.config/tmux/tmux.conf $HOME/.tmux.conf
@@ -39,7 +40,7 @@ else
 	exit 1
 fi
 
-# Install node and yarn
+# Install node and yarn for coc.nvim
 curl -sL install-node.now.sh/lts | sudo sh
 curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 
