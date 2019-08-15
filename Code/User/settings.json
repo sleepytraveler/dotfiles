@@ -103,6 +103,8 @@
         "editor.cursorStyle": "block-outline",
         "editor.renderWhitespace": "none",
         "editor.formatOnType": true,
+        "editor.trimAutoWhitespace": true,
+        "files.trimTrailingWhitespace": true
     },
 
     "python.jediEnabled": false,
@@ -116,6 +118,4 @@
     "C_Cpp.updateChannel": "Insiders",
     "workbench.colorTheme": "Atom One Dark",
     "editor.renderControlCharacters": true,
-
-    "search.usePCRE2": true
 }
