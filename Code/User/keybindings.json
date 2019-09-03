@@ -38,6 +38,16 @@
         "command": "search.action.focusNextSearchResult",
         "when": "searchViewletVisible"
     },
+    {
+        "key": "ctrl+n",
+        "command": "selectNextSuggestion",
+        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "selectPrevSuggestion",
+        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
     //{
     //     "command": "extension.goto-symbol-stack.goPrevOnStack",
     //     "key": "ctrl-o"
