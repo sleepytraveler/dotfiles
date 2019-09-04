@@ -8,6 +8,10 @@
     "editor.formatOnPaste": true,
     "editor.cursorBlinking": "solid",
     "editor.lineNumbers": "relative",
+    "editor.cursorSurroundingLines": 20,
+    "editor.renderControlCharacters": true,
+    "editor.renderWhitespace": "all",
+
     "diffEditor.ignoreTrimWhitespace": false,
 
     // Workbench setup
@@ -16,6 +20,7 @@
     "window.zoomLevel": 0,
     "workbench.settings.editor": "json",
     "workbench.editor.revealIfOpen": true,
+    "workbench.colorTheme": "Atom One Dark",
 
     // VIM Setup
     "vim.leader": ",",
@@ -94,7 +99,6 @@
         "editor.cursorStyle": "block-outline",
         "editor.renderWhitespace": "none",
         "editor.tabSize": 8,
-        "editor.formatOnType": true
     },
 
     // Python specific settings
@@ -116,6 +120,4 @@
     "gitlens.views.repositories.files.layout": "list",
     "explorer.confirmDelete": false,
     "C_Cpp.updateChannel": "Insiders",
-    "workbench.colorTheme": "Atom One Dark",
-    "editor.renderControlCharacters": true,
 }
