@@ -20,7 +20,6 @@
     "window.zoomLevel": 0,
     "workbench.settings.editor": "json",
     "workbench.editor.revealIfOpen": true,
-    "workbench.colorTheme": "Atom One Dark",
 
     // VIM Setup
     "vim.leader": ",",
