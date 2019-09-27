@@ -1,4 +1,5 @@
 [core]
+	editor = nvim
 [user]
 	name = Vanshidhar Konda
 [push]
