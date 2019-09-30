@@ -119,4 +119,5 @@
     "gitlens.views.repositories.files.layout": "list",
     "explorer.confirmDelete": false,
     "C_Cpp.updateChannel": "Insiders",
+    "C_Cpp.clang_format_path": "/usr/bin/clang-format"
 }
