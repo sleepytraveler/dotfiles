@@ -1,0 +1,5 @@
+# Ignore the compile_commands.json file used by clang/ccls
+compile_commands.json
+
+# Ignore vscode folder
+.vscode

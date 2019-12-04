@@ -1,5 +1,6 @@
 [core]
 	editor = nvim
+	excludesfile = /home/vrkonda/.config/gitconfig/git-globalignore
 [user]
 	name = Vanshidhar Konda
 [push]
