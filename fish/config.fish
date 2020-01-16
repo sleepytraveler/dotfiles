@@ -5,5 +5,8 @@
 # Set the EDITOR variable
 set -Ux EDITOR nvim
 # THEME PURE #
-set fish_function_path /home/vrkonda/.config/fish/functions/theme-pure/functions/ $fish_function_path
-source /home/vrkonda/.config/fish/functions/theme-pure/conf.d/pure.fish
+set fish_function_path $HOME/.config/fish/functions/theme-pure/functions/ $fish_function_path
+source $HOME/.config/fish/functions/theme-pure/conf.d/pure.fish
+
+# Add ~/.local/bin to PATH
+set PATH $PATH $HOME/.local/bin/
