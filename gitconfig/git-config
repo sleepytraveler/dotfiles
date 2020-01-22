@@ -1,13 +1,13 @@
 [core]
 	editor = nvim
-	excludesfile = /home/vrkonda/.config/gitconfig/git-globalignore
+	excludesfile = ~/.config/gitconfig/git-globalignore
 [user]
 	name = Vanshidhar Konda
 [push]
 	default = simple
 [alias]
 [include]
-	path = /home/vrkonda/.config/gitconfig/git-aliases
-	path = /home/vrkonda/.mutt/git-email-config
+	path = ~/.config/gitconfig/git-aliases
+	path = ~/.mutt/git-email-config
 [diff]
 	tool = vimdiff
