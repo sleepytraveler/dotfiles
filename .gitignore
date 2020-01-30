@@ -21,6 +21,8 @@ fish/powerline
 # Ignore fish specific things that are local to a system
 fish/fishd.*
 fish/functions
+fish/conf.d/*pure*
+fish/fish_variables
 
 # Ignore the "Code" folder created by VSCode
 Code/*
