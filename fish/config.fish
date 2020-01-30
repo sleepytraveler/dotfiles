@@ -8,5 +8,18 @@ set -Ux EDITOR nvim
 set fish_function_path $HOME/.config/fish/functions/theme-pure/functions/ $fish_function_path
 source $HOME/.config/fish/functions/theme-pure/conf.d/pure.fish
 
-set PATH  $HOME/.local/bin/ $PATH
-set PATH  $HOME/.cargo/bin/ $PATH
+if test -d $HOME/.local/bin
+	set PATH  $HOME/.local/bin/ $PATH
+end
+
+if test -d $HOME/.cargo/bin
+	set PATH  $HOME/.cargo/bin/ $PATH
+end
+
+if test -d $HOME/yarn/bin
+	set PATH $PATH $HOME/.yarn/bin $HOME/.config/yarn/global/node_modules/.bin
+end
+
+if test -d /usr/local/bin
+	set PATH $PATH /usr/local/bin
+end
