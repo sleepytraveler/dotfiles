@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Script to do basic setup of the custom configuration that is common among my systems
 cp -r ./* $HOME/.config/
 cd $HOME/.config
@@ -50,8 +52,8 @@ curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 ln -s /usr/bin/fish $HOME/.local/bin/fish
 
 # Install symbolic links to the pip powerline scripts
-ln -s ~/.local/lib/python3.7/site-packages/powerline/bindings/tmux ~/.config/tmux/tmux-powerline
-ln -s ~/.local/lib/python3.7/site-packages/powerline ~/.config/fish/powerline
+ln -s ~/.local/lib/python3.8/site-packages/powerline/bindings/tmux ~/.config/tmux/tmux-powerline
+ln -s ~/.local/lib/python3.8/site-packages/powerline ~/.config/fish/powerline
 
 # Install pure theme for fish
 curl git.io/pure-fish --output /tmp/pure_installer.fish --location --silent
