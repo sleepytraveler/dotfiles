@@ -46,3 +46,6 @@ intel-config
 
 # Ignore coc settings generated automatically
 coc
+
+# Ignore configstore created by npm
+configstore
