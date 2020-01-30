@@ -43,3 +43,6 @@ alacritty
 
 # Ignore all intel specific configurations
 intel-config
+
+# Ignore coc settings generated automatically
+coc
