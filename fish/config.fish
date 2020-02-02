@@ -9,11 +9,11 @@ set fish_function_path $HOME/.config/fish/functions/theme-pure/functions/ $fish_
 source $HOME/.config/fish/functions/theme-pure/conf.d/pure.fish
 
 if test -d $HOME/.local/bin
-	set PATH  $HOME/.local/bin/ $PATH
+	set PATH $HOME/.local/bin/ $PATH
 end
 
 if test -d $HOME/.cargo/bin
-	set PATH  $HOME/.cargo/bin/ $PATH
+	set PATH $HOME/.cargo/bin/ $PATH
 end
 
 if test -d $HOME/yarn/bin
@@ -22,4 +22,8 @@ end
 
 if test -d /usr/local/bin
 	set PATH $PATH /usr/local/bin
+end
+
+if test -d /snap/bin
+	set PATH /snap/bin $PATH
 end
