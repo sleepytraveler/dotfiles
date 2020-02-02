@@ -11,3 +11,5 @@
 	path = ~/.mutt/git-email-config
 [diff]
 	tool = vimdiff
+[color]
+	ui = auto
