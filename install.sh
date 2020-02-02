@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Script to do basic setup of the custom configuration that is common among my systems
-cp -r ./* $HOME/.config/
+rsync -av . $PWD $HOME/.config
 cd $HOME/.config
 
 ln -s $HOME/.config/gitconfig/git-config $HOME/.gitconfig
