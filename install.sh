@@ -36,7 +36,7 @@ fi
 
 # Install pip packages
 if [ -x "$(command -v pip)" ]; then
-	pip install --user neovim powerline-status
+	pip install --user neovim powerline-status compiledb
 else
 	echo "pip is not installed in the user path"
 	exit 1
