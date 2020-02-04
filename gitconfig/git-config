@@ -6,6 +6,7 @@
 [push]
 	default = simple
 [alias]
+	restore = "!git config remote.origin.fetch \"+refs/heads/*:refs/remotes/origin/*\" && git fetch origin"
 [include]
 	path = ~/.config/gitconfig/git-aliases
 	path = ~/.mutt/git-email-config
