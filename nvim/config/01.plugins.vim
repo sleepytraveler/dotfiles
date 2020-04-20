@@ -52,6 +52,9 @@ Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install() }}
 "Molokai colorscheme
 Plug 'ErichDonGubler/vim-sublime-monokai'
 
+" Nord dark colorscheme
+Plug 'arcticicestudio/nord-vim'
+
 Plug 'ntpeters/vim-better-whitespace'
 
 Plug 'embear/vim-localvimrc'
