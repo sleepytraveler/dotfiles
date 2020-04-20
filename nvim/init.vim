@@ -10,7 +10,9 @@ set number
 set ruler
 
 set termguicolors
-colorscheme sublimemonokai
+" colorscheme sublimemonokai
+colorscheme nord
+
 syntax enable
 let g:sublimemonokai_term_italic = 1
 
