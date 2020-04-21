@@ -19,7 +19,7 @@ source $HOME/.bashrc
 echo ". $HOME/.config/bash/bash_profile" >> $HOME/.bashrc
 echo ". $HOME/.config/bash/bashrc" >> $HOME/.bashrc
 
-REPO_PACKAGE_LIST="tmux neovim fzf fish cscope clang llvm"
+REPO_PACKAGE_LIST="tmux neovim fzf fish cscope clang llvm tig"
 
 # Install all packages that are commonly used
 if [ -x "$(command -v pacman)" ]; then
