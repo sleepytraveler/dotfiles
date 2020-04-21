@@ -27,3 +27,6 @@ end
 if test -d /snap/bin
 	set PATH /snap/bin $PATH
 end
+
+# Add ssh-agent init
+fish_ssh_agent
