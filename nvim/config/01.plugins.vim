@@ -38,7 +38,8 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install() }}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " Plug 'autozimu/LanguageClient-neovim', {
 " 			\ 'branch': 'next',
 " 			\ 'do': 'bash install.sh',
