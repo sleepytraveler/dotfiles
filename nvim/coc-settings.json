@@ -2,26 +2,14 @@
 	"suggest.enablePreview": true,
 	"suggest.maxCompleteItemCount": 20,
 	"languageserver": {
-		"ccls": {
-			"command": "ccls",
-			"filetypes": [
-				"c",
-				"cpp",
-				"objc",
-				"objcpp"
-			],
+		"clangd": {
+			"command": "clangd",
+			"args": ["-j=2"],
 			"rootPatterns": [
-				".ccls",
-				"compile_commands.json",
-				".vim/",
-				".git/",
-				".hg/"
+				"compile_flags.txt",
+				"compile_commands.json"
 			],
-			"initializationOptions": {
-				"cache": {
-					"directory": "/home/vrkonda/.cache/ccls"
-				}
-			}
+			"filetypes": ["c", "cpp", "h", "hpp"]
 		}
 	}
 }
