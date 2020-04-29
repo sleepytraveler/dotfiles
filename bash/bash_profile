@@ -1,7 +1,7 @@
 # .bash_profile
 
 # Source this file only if it has not already been sourced
-if [[ -v BASH_PROFILE_SOURCED ]]; then
+if [[ -z $BASH_PROFILE_SOURCED ]]; then
 	echo "Bash_profile has already been sourced";
 	return 1;
 fi
