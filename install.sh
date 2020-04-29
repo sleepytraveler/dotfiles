@@ -91,5 +91,13 @@ fish <<'END_FISH'
 	fisher add jethrokuan/fzf
 END_FISH
 
+# Add ~/.local/bin directory
+if [ ! -d "$HOME/.local/bin" ]; then
+	mkdir -p $HOME/.local/bin
+fi
+
+# Add symolic link to fish shell in ~/.local/bin
+ln -s `which fish` $HOME/.local/bin/fish
+
 # Install nix-env
 # curl https://nixos.org/nix/install | sh
