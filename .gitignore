@@ -11,6 +11,7 @@ mimeapps*
 
 # Ignore nvim & tmux plugins
 nvim/plugins
+nvim/.netrwhist
 tmux/plugins
 tmux/tmux-themepack
 
@@ -23,6 +24,12 @@ fish/fishd.*
 fish/functions
 fish/conf.d/*pure*
 fish/fish_variables
+fish/completions
+fish/conf.d/fzf.fish
+fish/conf.d/fzf_key_bindings.fish
+fish/fishfile
+fisher/
+
 
 # Ignore the "Code" folder created by VSCode
 Code/*
