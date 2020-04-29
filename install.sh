@@ -2,7 +2,6 @@
 
 # Script to do basic setup of the custom configuration that is common among my systems
 rsync -av . $PWD $HOME/.config
-cd $HOME/.config
 
 ln -s $HOME/.config/gitconfig/git-config $HOME/.gitconfig
 ln -s $HOME/.config/bash/bash_profile $HOME/.bash_profile
@@ -12,30 +11,40 @@ ln -s $HOME/.config/tmux $HOME/.tmux
 # Source the bash profile files again as nix installation adds
 # some lines to the bash profile
 source $HOME/.config/bash/bash_profile
-source $HOME/.profile
-source $HOME/.bashrc
+if [ -f "$HOME/profile" ]; then
+	source $HOME/.profile
+fi
+
+if [ -f "$HOME/.bashrc ]; then
+	source $HOME/.bashrc
+fi
 
 # Setup sourcing of bash_profile and bashrc in bashrc
 echo ". $HOME/.config/bash/bash_profile" >> $HOME/.bashrc
 echo ". $HOME/.config/bash/bashrc" >> $HOME/.bashrc
 
-REPO_PACKAGE_LIST="tmux neovim fzf fish cscope clang llvm tig clangd cmake"
+REPO_PACKAGE_LIST="tmux neovim fzf fish cscope tig nodejs" 
+DEV_PACKAGE_LIST="clang clangd cmake llvm"
 
 # Install all packages that are commonly used
 if [ -x "$(command -v pacman)" ]; then
-	sudo pacman -Sy --noconfirm $REPO_PACKAGE_LIST
+	sudo pacman -Sy --noconfirm $REPO_PACKAGE_LIST $DEV_PACKAGE_LIST
 elif [ -x "$(command -v dnf)" ]; then
 	sudo dnf check-update
-	sudo dnf install -y --skip-broken $REPO_PACKAGE_LIST
+	sudo dnf install -y --skip-broken $REPO_PACKAGE_LIST $DEV_PACKAGE_LIST
 elif [ -x "$(command -v apt-get)" ]; then
 	sudo apt-get update
 	sudo apt-get install -y $REPO_PACKAGE_LIST
 	sudo apt-get install -y python3-pip
+# Install brew on Mac OS X as package manager
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+	brew install $REPO_PACKAGE_LIST
 else
-	echo "This is not an Arch or Fedora based distribution. Please modify install script accordingly"
+	echo "Unknown system type. Please modify install script accordingly"
 fi
 
-PIP_PACKAGE_LIST="neovim powerline-status compiledb"
+PIP_PACKAGE_LIST="neovim compiledb"
 # Install pip packages
 if [ -x "$(command -v pip3)" ]; then
 	pip3 install --user $PIP_PACKAGE_LIST
@@ -44,19 +53,8 @@ else
 	exit 1
 fi
 
-# Install node and yarn for coc.nvim
-curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
-sudo apt-get install -y nodejs
+# Install yarn for coc.nvim
 curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
-
-# Setup symbolic links
-# Put a symoblic link to fish in $HOME/.local/bin - this is the expected
-# path to fish in tmux configuration
-ln -s /usr/bin/fish $HOME/.local/bin/fish
-
-# Install symbolic links to the pip powerline scripts
-ln -s ~/.local/lib/python3.8/site-packages/powerline/bindings/tmux ~/.config/tmux/tmux-powerline
-ln -s ~/.local/lib/python3.8/site-packages/powerline ~/.config/fish/powerline
 
 # Install all the neovim plugins
 echo "Installing neovim plugins"
@@ -82,10 +80,15 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 CARGO_PACKAGE_LIST="ripgrep"
 cargo install $CARGO_PACKAGE_LIST
 
+# Install fisher plugin manager for fish
+curl https://git.io/fisher --create-dirs -sLo \
+~/.config/fish/functions/fisher.fish
+
 # Install pure theme for fish
 fish <<'END_FISH'
 	curl git.io/pure-fish --output /tmp/pure_installer.fish --location --silent
 	source /tmp/pure_installer.fish; and install_pure
+	fisher add jethrokuan/fzf
 END_FISH
 
 # Install nix-env
