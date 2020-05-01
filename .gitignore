@@ -56,3 +56,6 @@ coc
 
 # Ignore configstore created by npm
 configstore
+
+# Ignore icedtea-web files
+icedtea*
