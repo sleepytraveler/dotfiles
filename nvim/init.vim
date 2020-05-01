@@ -10,11 +10,11 @@ set number
 set ruler
 
 set termguicolors
-" colorscheme sublimemonokai
 colorscheme nord
+" colorscheme sublimemonokai
+" let g:sublimemonokai_term_italic = 1
 
 syntax enable
-let g:sublimemonokai_term_italic = 1
 
 " set highlight colors
 set hlsearch

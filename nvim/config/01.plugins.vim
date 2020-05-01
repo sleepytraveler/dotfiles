@@ -6,12 +6,11 @@ call plug#begin('~/.config/nvim/plugins')
 
 Plug 'junegunn/vim-easy-align'
 
+Plug 'chaoren/vim-wordmotion'
+
 " Vim airline for powerline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
-" Cscope plugin that puts results in quickfix window
-" Plug  'ronakg/quickr-cscope.vim'
 
 " Auto insert matching closing pair
 Plug 'jiangmiao/auto-pairs'
@@ -22,33 +21,17 @@ Plug 'tpope/vim-surround'
 " Commenting helper
 Plug 'tpope/vim-commentary'
 
-" NERDTree - using on-demand loading
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-
 " Git gutter provides a diff in the gutter
 Plug 'airblade/vim-gitgutter'
 
 " Linux kernel coding style plugin
 Plug 'vivien/vim-linux-coding-style'
 
-" Autoformatter for code
-" Plug 'Chiel92/vim-autoformat'
-
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" Plug 'autozimu/LanguageClient-neovim', {
-" 			\ 'branch': 'next',
-" 			\ 'do': 'bash install.sh',
-" 			\ }
-" Plug 'ncm2/ncm2'
-" Plug 'roxma/nvim-yarp'
-" Plug 'ncm2/ncm2-bufword'
-" Plug 'ncm2/ncm2-path'
-"Plug 'ncm2/ncm2-pyclang'
 
 "Molokai colorscheme
 Plug 'ErichDonGubler/vim-sublime-monokai'
@@ -64,11 +47,18 @@ Plug 'simplyzhao/cscope_maps.vim'
 
 Plug 'christoomey/vim-tmux-navigator'
 
+" Autoformatter for code
+" Plug 'Chiel92/vim-autoformat'
+
+" Cscope plugin that puts results in quickfix window
+" Plug  'ronakg/quickr-cscope.vim'
+
+" NERDTree - using on-demand loading
+" Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+
 " Python plugins
 " Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'python-mode/python-mode', { 'branch': 'develop' }
-
-Plug 'chaoren/vim-wordmotion'
+" Plug 'python-mode/python-mode', { 'branch': 'develop' }
 
 call plug#end()
 
@@ -88,8 +78,8 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 " Reduce the NVIM update time to 250 ms
 set updatetime=250
 
-"Setup for NERDcommenter
-filetype plugin on
+" Setup for NERDcommenter
+" filetype plugin on
 
 " Setup for localvimrc loading plugin
 let g:localvimrc_persistent = 1
@@ -100,9 +90,6 @@ if executable('rg')
 endif
 
 set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
-nnoremap <Leader>g :silent lgrep<Space>
-nnoremap <silent> [f :lprevious<CR>
-nnoremap <silent> ]f :lnext<CR>
 
 " Disable verbose for cscope - avoids having to press enter
 " when launching nvim/vim

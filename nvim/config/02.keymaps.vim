@@ -55,10 +55,6 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 nmap <Leader>; :Buffers<CR>
 nmap <Leader>t :GFiles<CR>
 
-" -------------- Ack.vim setup ---------------------------------------
-nmap <M-k> :Ack! "\b<cword>\b" %:p:h <CR>
-nmap <M-F> :Ack! "\b<cword>\b" <CR>
-
 " -------------- Clang-format integration ----------------------------
 "if filereadable(expand("/usr/share/clang/clang-format.py"))
 "	map <C-K> :pyf /usr/share/clang/clang-format.py<CR>
@@ -70,4 +66,13 @@ nmap \x :cclose <CR>
 
 " -------------- Generic shortcuts -----------------------------------
 map <Leader>cd :cd %:p:h<CR>
+
+" -------------- Search and Grep shortcuts ---------------------------
+nnoremap <Leader>g :silent lgrep<Space>
+nnoremap <silent> [f :lprevious<CR>
+nnoremap <silent> ]f :lnext<CR>
+
+" -------------- Ack.vim setup ---------------------------------------
+nmap <M-k> :Ack! "\b<cword>\b" %:p:h <CR>
+nmap <M-F> :Ack! "\b<cword>\b" <CR>
 
