@@ -1,28 +1,10 @@
 let mapleader = ','
 
-" CoC keymaps
-inoremap <silent><expr> <c-space> coc#refresh()
-nmap <Leader>ld	<Plug>(coc-definition)
-nmap <Leader>lv :call CocAction('jumpDefinition', 'vsplit')<CR>
-nmap <Leader>lx <Plug>(coc-references)
-nmap <Leader>li <Plug>(coc-implementation)
-vmap <Leader>lf <Plug>(coc-format-selected)
-
-nmap <Leader>ac <Plug>(coc-codeaction)
-
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
+" -------------------- Generic functions ------------------------------
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-
-" Use K for show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
   if &filetype == 'vim'
@@ -32,25 +14,39 @@ function! s:show_documentation()
   endif
 endfunction
 
+"--------------------- CoC keymaps ------------------------------------
+" Insert mode
+inoremap <silent><expr> <c-space> coc#refresh()
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+
+" Goto code navigation
+nmap <silent>gd	<Plug>(coc-definition)
+nmap <silent>gv :call CocAction('jumpDefinition', 'vsplit')<CR>
+nmap <silent>gy <Plug>(coc-type-definition)
+nmap <silent>gr <Plug>(coc-references)
+nmap <silent>gi <Plug>(coc-implementation)
+nmap <silent>gac <Plug>(coc-codeaction)
+" Use K for show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+" Use `[g` and `]g` to navigate diagnostics - keeping in line
+" with the similar keymaps in vim-unimpaired plugin
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" Formatting
+vmap <Leader>gf <Plug>(coc-format-selected)
+
 " Highlight symbol under cursor on CursorHold
+"    - this is default behavior on neovim, but not vim
 " autocmd CursorHold * silent call CocActionAsync('highlight')
-" Using CocList
-" Show all diagnostics
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
-" Manage extensions
-nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
-" Show commands
-nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
-" Find symbol of current document
-nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
-" Search workspace symbols
-nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
-" Do default action for next item.
-nnoremap <silent> <space>j  :<C-u>CocNext<CR>
-" Do default action for previous item.
-nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
-" Resume latest coc list
-nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
 " -------------- fzf.vim setup ---------------------------------------
 nmap <Leader>; :Buffers<CR>
 nmap <Leader>t :GFiles<CR>
@@ -64,15 +60,10 @@ nmap <Leader>t :GFiles<CR>
 " -------------- QuickFix window navigation/manipulation -------------
 nmap \x :cclose <CR>
 
-" -------------- Generic shortcuts -----------------------------------
-map <Leader>cd :cd %:p:h<CR>
-
 " -------------- Search and Grep shortcuts ---------------------------
-nnoremap <Leader>g :silent lgrep<Space>
-nnoremap <silent> [f :lprevious<CR>
-nnoremap <silent> ]f :lnext<CR>
-
 " -------------- Ack.vim setup ---------------------------------------
-nmap <M-k> :Ack! "\b<cword>\b" %:p:h <CR>
-nmap <M-F> :Ack! "\b<cword>\b" <CR>
+nmap <Leader>s :Ack! "\b<cword>\b" %:p:h <CR>
+nmap <Leader>f :Ack! "\b<cword>\b" <CR>
+
+" -------------- Generic shortcuts -----------------------------------
 
