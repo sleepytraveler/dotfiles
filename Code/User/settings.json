@@ -1,6 +1,6 @@
 {
     // Editor specific settings
-    "editor.fontFamily": "\"Monaco for Powerline\"",
+    "editor.fontFamily": "'Monaco', 'SF Mono', Menlo, 'Courier New'",
     "editor.fontLigatures": true,
     "editor.minimap.enabled": false,
     "editor.fontSize": 13,
@@ -15,7 +15,7 @@
     "diffEditor.ignoreTrimWhitespace": false,
 
     // Workbench setup
-    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Nord",
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "window.zoomLevel": 0,
     "workbench.settings.editor": "json",
@@ -35,19 +35,11 @@
             "commands": [":nohl"]
         },
         {
-            "before": ["<leader>", "l", "d"],
-            "commands": ["editor.action.revealDefinition"]
-        },
-        {
-            "before": ["<leader>", "l", "p"],
-            "commands": ["editor.action.peekDefinition"]
-        },
-        {
             "before": ["K"],
             "commands": ["editor.action.showHover"]
         },
         {
-            "before": ["<leader>", "l", "x"],
+            "before": ["g", "r"],
             "commands": ["references-view.find"]
         },
         {
@@ -64,6 +56,16 @@
                  "workbench.action.toggleSidebarVisibility"],
             "when": "searchViewletVisible"
         },
+        // { // Comment out as this causes VSCode to crash
+        //     "before": ["[", "q"],
+        //     "commands": ["search.action.focusPreviousSearchResult"],
+        //     "when": "searchViewletVisbile && hasSearchResults"
+        // },
+        // {
+        //     "before": ["]", "q"],
+        //     "commands": ["search.action.focusNextSearchResult"],
+        //     "when": "searchViewletVisible && hasSearchResults"
+        // },
         {
             "before": ["\\", "b"],
             "commands": ["workbench.action.toggleSidebarVisibility"]
@@ -119,5 +121,18 @@
     "gitlens.views.repositories.files.layout": "list",
     "explorer.confirmDelete": false,
     "C_Cpp.updateChannel": "Insiders",
-    "C_Cpp.clang_format_path": "/usr/bin/clang-format"
+    "C_Cpp.clang_format_path": "/usr/bin/clang-format",
+
+    // Telemetry settings
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+
+    // Plugin settings
+
+    // Gitlens
+    "gitlens.views.repositories.location": "gitlens",
+    "gitlens.views.fileHistory.location": "gitlens",
+    "gitlens.views.lineHistory.location": "gitlens",
+    "gitlens.views.compare.location": "gitlens",
+    "gitlens.views.search.location": "gitlens"
 }
