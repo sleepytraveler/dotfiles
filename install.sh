@@ -99,5 +99,8 @@ fi
 # Add symolic link to fish shell in ~/.local/bin
 ln -s `which fish` $HOME/.local/bin/fish
 
+# Add ssh rc to the right place
+cp ssh_rc $HOME/.ssh/rc
+
 # Install nix-env
 # curl https://nixos.org/nix/install | sh
