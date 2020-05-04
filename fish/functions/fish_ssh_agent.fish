@@ -1,8 +1,8 @@
 # Source: https://github.com/ivakyb/fish_ssh_agent
 
 function __ssh_auth_sock_connected -d "check if SSH_AUTH_SOCK connection is setup"
-    if test -z "$SSH_AUTH_SOCK"
-        return 1
+    if begin; test -f $SSH_AUTH_SOCK; and test -e "$SSH_AUTH_SOCK"; end
+        return 1;
     end
 end
 
@@ -34,6 +34,8 @@ function fish_ssh_agent --description "Start ssh-agent if not started yet, or us
    if __ssh_auth_sock_connected
    	return
    end
+
+   echo "Starting fish ssh agent"
 
    if test -z "$SSH_ENV"
       set -xg SSH_ENV $HOME/.ssh/environment
