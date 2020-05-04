@@ -77,6 +77,7 @@ tmux kill-server
 # Install RUST
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
+export PATH=$HOME/.cargo/bin:$PATH
 CARGO_PACKAGE_LIST="ripgrep"
 cargo install $CARGO_PACKAGE_LIST
 
