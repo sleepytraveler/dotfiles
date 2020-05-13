@@ -23,7 +23,7 @@ fi
 echo ". $HOME/.config/bash/bash_profile" >> $HOME/.bashrc
 echo ". $HOME/.config/bash/bashrc" >> $HOME/.bashrc
 
-REPO_PACKAGE_LIST="curl tmux neovim fzf fish cscope tig nodejs"
+REPO_PACKAGE_LIST="curl tmux neovim fzf fish cscope tig nodejs git-extras"
 DEV_PACKAGE_LIST="clang clangd cmake llvm"
 
 # Install all packages that are commonly used
