@@ -133,7 +133,7 @@ set nocscopeverbose
 " Settings for coc.nvim
 " See https://github.com/neoclide/coc.nvim for more details
 set hidden
-set cmdheight=2		" better display for messages
 set updatetime=300	" Smaller update time for CursorHold & CursorHoldI
 set shortmess+=c	" don't give |ins-completion-menu| messages
 
+" set cmdheight=1		" better display for messages
