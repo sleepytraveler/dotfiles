@@ -37,7 +37,7 @@ elif [ -x "$(command -v apt-get)" ]; then
 	sudo apt-get install -y $REPO_PACKAGE_LIST
 	sudo apt-get install -y python3-pip
 # Install brew on Mac OS X as package manager
-elif [[ "$OSTYPE" == "darwin"* ]]; then
+elif [[ `uname -s` == "Darwin" ]]; then
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 	brew install $REPO_PACKAGE_LIST
 else
