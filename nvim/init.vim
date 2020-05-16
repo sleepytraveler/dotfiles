@@ -37,3 +37,5 @@ set mouse=a
 set ignorecase
 set smartcase
 
+" Setup integration with clipboard (atleast Mac)
+set cb=unnamed
