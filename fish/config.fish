@@ -24,6 +24,10 @@ if test -d /usr/local/bin
 	set PATH $PATH /usr/local/bin
 end
 
+if test -d $HOME/.fzf/bin
+	set PATH $PATH $HOME/.fzf/bin/
+end
+
 if test -d /snap/bin
 	set PATH /snap/bin $PATH
 end
