@@ -61,5 +61,10 @@
         "key": "ctrl+k",
         "command": "search.action.focusPreviousSearchResult",
         "when": "vim.active && hasSearchResult && searchViewletVisible"
+    },
+    {
+        "key": "ctrl+x",
+        "command": "search.action.clearSearchResults",
+        "when": "vim.active && searchViewletVisible"
     }
 ]
