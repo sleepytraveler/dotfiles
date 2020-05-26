@@ -9,7 +9,7 @@ set relativenumber
 set number
 set ruler
 
-" set termguicolors
+set termguicolors
 colorscheme nord
 " colorscheme sublimemonokai
 " let g:sublimemonokai_term_italic = 1
