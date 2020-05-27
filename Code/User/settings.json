@@ -126,7 +126,7 @@
     "python.pythonPath": "/usr/bin/python3", // default to python3 unless overriden
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
-    "python.linting.pep8Enabled": true,
+    "python.linting.pycodestyleEnabled": true,
     "python.formatting.provider": "autopep8",
     "gitlens.views.repositories.files.layout": "list",
     "explorer.confirmDelete": false,
