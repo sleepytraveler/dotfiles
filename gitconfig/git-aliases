@@ -3,7 +3,9 @@
 	br = branch
 	co = checkout
 	cm = commit
-	st = status
 	sh = show
 	purr = pull --rebase
 	dsync = !git reset --hard $1 && git pull --rebase
+	restore = "!git config remote.origin.fetch \"+refs/heads/*:refs/remotes/origin/*\" && git fetch origin"
+	st = status -uno
+	last = log -1 HEAD
