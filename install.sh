@@ -92,6 +92,11 @@ fish <<'END_FISH'
 	fisher add jethrokuan/fzf
 END_FISH
 
+# Install git-fuzzy
+mkdir -p $HOME/.local/utils/
+git clone git@github.com:bigH/git-fuzzy.git $HOME/.local/utils/git-fuzzy
+ln -s $HOME/.local/utils/git-fuzzy/bin/git-fuzzy $HOME/.local/bin/git-fuzzy
+
 # Add ~/.local/bin directory
 if [ ! -d "$HOME/.local/bin" ]; then
 	mkdir -p $HOME/.local/bin
