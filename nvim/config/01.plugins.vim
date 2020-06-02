@@ -36,6 +36,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vivien/vim-linux-coding-style'
 
 " Fuzzy searching
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " Better search wrapper
