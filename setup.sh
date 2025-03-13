@@ -1,11 +1,11 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
 stow_pkgs_in_dir() {
-    for dir in */; do                   # list directories in the form "/$1/dirname/"
-        dir=${dir%*/}                   # remove the trailing "/"
-        echo "Setting up ${dir##*/} .." # print everything after the final "/"
-        stow "${dir##*/}" --target="$HOME"
-    done
+  for dir in */; do                    # list directories in the form "/$1/dirname/"
+    dir=${dir%*/}                      # remove the trailing "/"
+    echo -e "Setting up ${dir##*/} .." # print everything after the final "/"
+    stow "${dir##*/}" --target="$HOME"
+  done
 }
 
 ## Helpful script from: https://systemcrafters.net/managing-your-dotfiles/using-gnu-stow/
@@ -17,47 +17,47 @@ BLUE='\033[1;34m'
 RED='\033[1;30m'
 NC='\033[0m'
 
-echo "${BLUE}Stashing existing changes...${NC}"
+echo -e "${BLUE}Stashing existing changes...${NC}"
 stash_result=$(git stash push -m "sync-dotfiles: Before syncing dotfiles")
 needs_pop=1
 if [ "$stash_result" = "No local changes to save" ]; then
-    needs_pop=0
+  needs_pop=0
 fi
 
-echo "${BLUE}Pulling updates from dotfiles repo...${NC}"
-echo
+echo -e "${BLUE}Pulling updates from dotfiles repo...${NC}"
+echo -e
 git pull origin master
-echo
+echo -e
 
 if [[ $needs_pop -eq 1 ]]; then
-    echo "${BLUE}Popping stashed changes...${NC}"
-    echo
-    git stash pop
+  echo -e "${BLUE}Popping stashed changes...${NC}"
+  echo -e
+  git stash pop
 fi
 
 unmerged_files=$(git diff --name-only --diff-filter=U)
 if [[ ! -z $unmerged_files ]]; then
-    echo "${RED}The following files have merge conflicts after popping the stash:${NC}"
-    echo
-    printf %"s\n" $unmerged_files # Ensure newlines are printed
+  echo -e "${RED}The following files have merge conflicts after popping the stash:${NC}"
+  echo -e
+  printf %"s\n" $unmerged_files # Ensure newlines are printed
 else
-    #
-    # Setup configuration for programs that are common to all platforms - macOS & Linux
-    #
+  #
+  # Setup configuration for programs that are common to all platforms - macOS & Linux
+  #
 
-    # pushd "./pkgs/" >/dev/null
-    cd ./pkgs/
+  # pushd "./pkgs/" >/dev/null
+  cd ./pkgs/
+  stow_pkgs_in_dir
+  # popd >/dev/null
+  cd ../
+
+  #
+  # Setup configuration for programs used only on macOS
+  #
+
+  if [[ "$OSTYPE" == "darwin"* ]]; then
+    cd ./macos-pkgs/
     stow_pkgs_in_dir
-    # popd >/dev/null
     cd ../
-
-    #
-    # Setup configuration for programs used only on macOS
-    #
-
-    if [[ "$OSTYPE" == "darwin"* ]]; then
-        cd ./macos-pkgs/
-        stow_pkgs_in_dir
-        cd ../
-    fi
+  fi
 fi
