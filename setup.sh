@@ -9,6 +9,11 @@ stow_pkgs_in_dir() {
 }
 
 #
+# Update oconfiguration from git
+#
+git pull --rebase --prune
+
+#
 # Setup configuration for programs that are common to all platforms - macOS & Linux
 #
 
