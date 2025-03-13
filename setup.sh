@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
-pushd ./pkgs/ >/dev/null
+# pushd "./pkgs/" >/dev/null
+cd ./pkgs/
 
 for dir in */; do                 # list directories in the form "/$1/dirname/"
   dir=${dir%*/}                   # remove the trailing "/"
@@ -8,4 +9,5 @@ for dir in */; do                 # list directories in the form "/$1/dirname/"
   stow "${dir##*/}" --target="$HOME"
 done
 
-popd >/dev/null
+# popd >/dev/null
+cd ../
