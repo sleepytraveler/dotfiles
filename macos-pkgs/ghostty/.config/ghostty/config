@@ -1,0 +1,4 @@
+font-family = "Consolas 7NF"
+font-size = 15
+theme = "GruvBoxDark"
+term = "xterm-256color"
