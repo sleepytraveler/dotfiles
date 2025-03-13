@@ -19,11 +19,11 @@ set delete = yes
 
 # Register accounts
 folder-hook /home/vkonda/Mail//AmpereOS// " \
-    source /home/vkonda/.config/neomutt/AmpereOS "
+    source /home/vkonda/.config/neomutt-work/AmpereOS "
 
 
 # Source primary account
-source /home/vkonda/.config/neomutt/AmpereOS
+source /home/vkonda/.config/neomutt-work/AmpereOS
 
 # Extra configuration
 set abort_nosubject=yes
