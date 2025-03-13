@@ -26,7 +26,7 @@ fi
 
 echo -e "${BLUE}Pulling updates from dotfiles repo...${NC}"
 echo -e
-git pull origin master
+git pull origin main --rebase --prune
 echo -e
 
 if [[ $needs_pop -eq 1 ]]; then
