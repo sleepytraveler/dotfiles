@@ -1,0 +1,64 @@
+[alias]
+	br = "branch"
+	cm = "commit --signoff"
+	co = "checkout"
+	glog = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
+	last = "log -1 HEAD"
+	lg = "fuzzy log"
+	restore = "!git config remote.origin.fetch\n        \"+refs/heads/*:refs/remotes/origin/*\" && git fetch origin"
+	st = "status -uno --short"
+	stash-all = "stash save --include-untracked"
+	sw = "switch"
+	undo = "reset --soft HEAD^"
+
+[color]
+	ui = "auto"
+
+[commit]
+	gpgSign = false
+
+[core]
+	pager = "delta"
+	sshCommand = "ssh"
+
+[delta]
+	features = "line-numbers decorations"
+	light = false
+	navigate = true
+	syntax-theme = "gruvbox-dark"
+
+[diff]
+	colorMoved = "default"
+
+[fetch]
+	prune = "true"
+	pruneTags = "true"
+
+[gpg]
+	format = "openpgp"
+
+[gpg "openpgp"]
+	program = "gpg"
+
+[init]
+	defaultBranch = "main"
+
+[interactive]
+	diffFilter = "delta --color-only"
+
+[merge]
+	conflictStyle = "diff3"
+	ff = "only"
+
+[pull]
+	ff = "only"
+
+[tag]
+	gpgSign = false
+
+[user]
+	name = "Vanshidhar Konda"
+	userConfigOnly = "true"
+
+[include]
+	path = "./git-local.config"
