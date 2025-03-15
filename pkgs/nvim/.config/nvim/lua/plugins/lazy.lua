@@ -8,5 +8,10 @@ return {
       colorscheme = "gruvbox",
     },
   },
-  { "ellisonleao/gruvbox.nvim" },
+  {
+    "ellisonleao/gruvbox.nvim",
+    opts = {
+      transparent_mode = true,
+    }
+  },
 }
