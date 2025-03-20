@@ -28,6 +28,8 @@ alias vim nvim
 alias vimdiff 'nvim -d'
 alias zj zellij
 
+set -x EDITOR nvim
+
 if test "$TERM" != dumb
     $HOME/.nix-profile/bin/starship init fish | source
     # Initialize zoxide
