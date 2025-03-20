@@ -60,4 +60,9 @@ else
     stow_pkgs_in_dir
     cd ../
   fi
+
+  if [[ "$1" == "server" ]]; then
+    cd ./server-pkgs/
+    stow_pkgs_in_dir
+    cd ../
 fi
