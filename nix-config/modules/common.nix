@@ -22,10 +22,8 @@ with pkgs; [
   tealdeer
   zoxide
 
-# TMUX related packages
+# Console multiplexers
   tmux
-  tmuxPlugins.vim-tmux-navigator
-  tmuxPlugins.sensible
   zellij
 
 # Others

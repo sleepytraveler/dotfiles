@@ -1,0 +1,9 @@
+[submodule "pkgs/tmux/.config/tmux/plugins/vim-tmux-navigator"]
+	path = pkgs/tmux/.config/tmux/plugins/vim-tmux-navigator
+	url = git@github.com:christoomey/vim-tmux-navigator.git
+[submodule "pkgs/tmux/.config/tmux/plugins/tmux-sensible"]
+	path = pkgs/tmux/.config/tmux/plugins/tmux-sensible
+	url = git@github.com:tmux-plugins/tmux-sensible
+[submodule "pkgs/tmux/.config/tmux/plugins/--force"]
+	path = pkgs/tmux/.config/tmux/plugins/--force
+	url = git@github.com:tmux-plugins/tpm.git
