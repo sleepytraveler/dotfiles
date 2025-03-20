@@ -4,6 +4,6 @@
 [submodule "pkgs/tmux/.config/tmux/plugins/tmux-sensible"]
 	path = pkgs/tmux/.config/tmux/plugins/tmux-sensible
 	url = git@github.com:tmux-plugins/tmux-sensible
-[submodule "pkgs/tmux/.config/tmux/plugins/--force"]
-	path = pkgs/tmux/.config/tmux/plugins/--force
+[submodule "pkgs/tmux/.config/tmux/plugins/tpm"]
+	path = pkgs/tmux/.config/tmux/plugins/tpm
 	url = git@github.com:tmux-plugins/tpm.git
