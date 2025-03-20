@@ -65,4 +65,5 @@ else
     cd ./server-pkgs/
     stow_pkgs_in_dir
     cd ../
+  fi
 fi
