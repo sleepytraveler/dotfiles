@@ -61,9 +61,19 @@ else
     cd ../
   fi
 
-  if [[ "$1" == "server" ]]; then
-    cd ./server-pkgs/
-    stow_pkgs_in_dir
-    cd ../
-  fi
+  for arg in "$@"; do
+    echo "Argument: $arg"
+    if [[ $arg == "server" ]]; then
+      cd ./server-pkgs/
+      stow_pkgs_in_dir
+      cd ../
+    fi
+
+    if [[ $arg == "work" ]]; then
+      cd ./work-dotfiles/
+      stow_pkgs_in_dir
+      cd ../
+    fi
+  done
+
 fi
