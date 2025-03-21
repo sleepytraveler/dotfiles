@@ -7,3 +7,6 @@
 [submodule "pkgs/tmux/.config/tmux/plugins/tpm"]
 	path = pkgs/tmux/.config/tmux/plugins/tpm
 	url = git@github.com:tmux-plugins/tpm.git
+[submodule "work-dotfiles"]
+	path = work-dotfiles
+	url = git@gitlab.com:AmpereComputing/personal/vkonda/work-dotfiles.git
