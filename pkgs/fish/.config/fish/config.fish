@@ -27,6 +27,7 @@ alias rg 'rg --smart-case'
 alias vim nvim
 alias vimdiff 'nvim -d'
 alias zj zellij
+alias lgit lazygit
 
 set -x EDITOR nvim
 
