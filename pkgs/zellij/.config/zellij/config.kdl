@@ -329,7 +329,7 @@ theme "gruvbox-dark"
 // Default: "default"
 // (Requires restart)
 //
-default_layout "compact"
+// default_layout "compact"
 
 // Choose the mode that zellij uses when starting up.
 // Default: normal
@@ -395,7 +395,7 @@ default_layout "compact"
 // The folder in which Zellij will look for layouts
 // (Requires restart)
 //
-layout_dir "$HOME/.config/zellij/layouts/"
+// layout_dir "$HOME/.config/zellij/layouts/"
 
 // The folder in which Zellij will look for themes
 // (Requires restart)
