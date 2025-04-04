@@ -4,7 +4,8 @@ with pkgs; [
 # Git related packages
   delta
   git
-  gitui
+  #gitui
+  lazygit
   tig
 
 # Shell configuration packages
