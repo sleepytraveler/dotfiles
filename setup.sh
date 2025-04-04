@@ -27,7 +27,7 @@ fi
 echo -e "${BLUE}Pulling updates from dotfiles repo...${NC}"
 echo -e
 git pull origin main --rebase --prune
-git submodule update --recursive
+# git submodule update --recursive
 echo -e
 
 if [[ $needs_pop -eq 1 ]]; then
