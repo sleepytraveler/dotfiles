@@ -20,9 +20,10 @@ alias diff 'delta -s'
 alias du dust
 alias less bat
 alias ll 'eza -l'
-alias lll 'eza -la'
+alias lla 'eza -la'
 alias ls eza
 alias lt 'eza -T'
+alias lta 'eza -Ta'
 alias rg 'rg --smart-case'
 alias vim nvim
 alias vimdiff 'nvim -d'
