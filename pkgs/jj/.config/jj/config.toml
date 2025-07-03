@@ -2,3 +2,6 @@
 
 [ui]
 default-command = "log"
+
+[user]
+name = "Vanshidhar Konda"
