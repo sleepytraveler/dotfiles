@@ -7,6 +7,7 @@ with pkgs; [
   #gitui
   lazygit
   tig
+  jujutsu
 
 # Shell configuration packages
   bat
