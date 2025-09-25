@@ -26,6 +26,7 @@
 	light = false
 	navigate = true
 	syntax-theme = "gruvbox-dark"
+	side-by-side = true
 
 [diff]
 	colorMoved = "default"
