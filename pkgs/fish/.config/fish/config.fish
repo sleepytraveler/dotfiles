@@ -63,3 +63,6 @@ end
 if test -f $plugin_dir/init.fish
     source $plugin_dir/init.fish
 end
+
+# Setup fzf key_bindings
+fzf --fish | source
