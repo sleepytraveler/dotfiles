@@ -12,4 +12,5 @@ if vim.g.neovide then
   -- vim.g.neovide_background_color = "#0f1117" .. alpha()
   vim.g.neovide_theme = "dark"
   vim.opt.termguicolors = true
+  vim.opt.linespace = 5
 end
