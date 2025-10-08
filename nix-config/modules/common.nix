@@ -1,3 +1,5 @@
+# Keep an eye on the github awesome-rust repo for a list of rust utilities
+
 { pkgs, ... } :
 with pkgs; [
 
@@ -23,6 +25,7 @@ with pkgs; [
   starship
   tealdeer
   zoxide
+  procs
 
 # Console multiplexers
   tmux
