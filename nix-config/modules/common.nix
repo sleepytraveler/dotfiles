@@ -14,7 +14,7 @@ with pkgs; [
 # Shell configuration packages
   bat
   clipboard-jh
-  du-dust
+  dust
   duf
   curl
   eza
