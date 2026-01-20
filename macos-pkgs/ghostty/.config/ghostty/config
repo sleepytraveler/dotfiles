@@ -1,0 +1,9 @@
+# font-family = "Cascadia Code PL"
+# font-family = "Consolas Nerd Font Mono"
+# font-family = "Zed Mono Medium"
+font-family = "Lilex"
+font-size = 15
+theme = "Gruvbox Dark"
+term = "xterm-256color"
+background-opacity = "0.98"
+macos-titlebar-style = "tabs"
