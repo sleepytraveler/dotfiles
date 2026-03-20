@@ -1,10 +1,10 @@
 [alias]
 	br = "branch"
+  ca = "commit --amend"
 	cm = "commit --signoff"
 	co = "checkout"
-	glog = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
+	lg = "log --graph -15 --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 	last = "log -1 HEAD"
-	lg = "fuzzy log"
 	restore = "!git config remote.origin.fetch\n        \"+refs/heads/*:refs/remotes/origin/*\" && git fetch origin"
 	st = "status -uno --short"
 	stash-all = "stash save --include-untracked"
