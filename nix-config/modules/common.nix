@@ -32,5 +32,5 @@ with pkgs; [
   zellij
 
 # Others
-  nixfmt-rfc-style
+  nixfmt
 ]
