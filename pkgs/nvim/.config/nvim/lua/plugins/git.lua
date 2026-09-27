@@ -1,3 +1,8 @@
+-- Disable all git related plugins
+if true then
+  return {}
+end
+
 return {
   {
     "NeogitOrg/neogit",
