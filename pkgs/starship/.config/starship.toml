@@ -2,13 +2,14 @@ format = """
 $username\
 $hostname\
 $directory\
+$line_break\
 $git_branch\
+$git_state\
+$git_status\
 $line_break\
 $character"""
 
 right_format = """
-$git_state\
-$git_status\
 $os\
 """
 
