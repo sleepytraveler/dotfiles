@@ -10,3 +10,6 @@
 [submodule "work-dotfiles"]
 	path = work-dotfiles
 	url = git@gitlab.com:AmpereComputing/personal/vkonda/work-dotfiles.git
+[submodule "pkgs/tmux/.config/tmux/plugins/tmux-everforest"]
+	path = pkgs/tmux/.config/tmux/plugins/tmux-everforest
+	url = https://github.com/TanglingTreats/tmux-everforest.git
