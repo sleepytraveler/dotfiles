@@ -25,7 +25,7 @@
 	features = "line-numbers decorations"
 	light = false
 	navigate = true
-	syntax-theme = "gruvbox-dark"
+	syntax-theme = "everforest-dark"
 	side-by-side = true
 
 [diff]
