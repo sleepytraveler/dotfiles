@@ -23,9 +23,7 @@
 
 [delta]
 	features = "line-numbers decorations"
-	light = false
 	navigate = true
-	syntax-theme = "everforest-dark"
 	side-by-side = true
 
 [diff]
