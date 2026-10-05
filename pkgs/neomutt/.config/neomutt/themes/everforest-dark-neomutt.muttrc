@@ -1,0 +1,49 @@
+# Everforest Dark theme for NeoMutt
+# Include from neomuttrc with:
+#   source "~/codex-sandbox/config_files/everforest-dark-neomutt.muttrc"
+
+# Base palette: Everforest dark hard
+color normal        "#d3c6aa" "#2d353b"
+color message       "#d3c6aa" "#2d353b"
+color error         "#e67e80" "#2d353b"
+color warning       "#dbbc7f" "#2d353b"
+color tilde         "#7a8478" "#2d353b"
+color markers       "#e69875" "#2d353b"
+color prompt        "#a7c080" "#2d353b"
+color progress      "#2d353b" "#a7c080"
+
+# Interface
+color status        "#d3c6aa" "#3d484d"
+color indicator     "#2d353b" "#a7c080"
+color search        "#2d353b" "#dbbc7f"
+color tree          "#859289" "#2d353b"
+color attachment    "#7fbbb3" "#2d353b"
+
+# Headers and message body
+color hdrdefault    "#d3c6aa" "#2d353b"
+color header        "#a7c080" "#2d353b" "^(From|To|Cc|Bcc|Reply-To|Subject|Date):"
+color header        "#83c092" "#2d353b" "^(Organization|User-Agent|X-Mailer):"
+color signature     "#859289" "#2d353b"
+color quoted        "#7fbbb3" "#2d353b"
+color quoted1       "#a7c080" "#2d353b"
+color quoted2       "#dbbc7f" "#2d353b"
+color quoted3       "#e69875" "#2d353b"
+color quoted4       "#d699b6" "#2d353b"
+color quoted5       "#e67e80" "#2d353b"
+
+# Index: muted read mail, warm unread mail, conspicuous flags
+color index         "#859289" "#2d353b" "~R"
+color index         "#d3c6aa" "#2d353b" "~N"
+color index         "#dbbc7f" "#2d353b" "~F"
+color index         "#e67e80" "#2d353b" "~D"
+color index         "#7fbbb3" "#2d353b" "~T"
+color index         "#a7c080" "#2d353b" "~p"
+
+# Sidebar (when NeoMutt is built with sidebar support)
+color sidebar_highlight "#a7c080" "#3d484d"
+color sidebar_indicator "#2d353b" "#a7c080"
+color sidebar_divider   "#4f585e" "#2d353b"
+color sidebar_flagged   "#dbbc7f" "#2d353b"
+color sidebar_new       "#d3c6aa" "#2d353b"
+color sidebar_ordinary  "#859289" "#2d353b"
+color sidebar_unread    "#a7c080" "#2d353b"
