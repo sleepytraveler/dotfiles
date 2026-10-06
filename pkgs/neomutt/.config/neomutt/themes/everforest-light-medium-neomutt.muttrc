@@ -2,6 +2,10 @@
 # Include from neomuttrc with:
 #   source "~/codex-sandbox/config_files/everforest-light-medium-neomutt.muttrc"
 
+# Enable the #RRGGBB values below on NeoMutt versions where direct colour is
+# opt-in.  Newer versions accept this setting for backwards compatibility.
+set color_directcolor = yes
+
 # Base palette: Everforest light medium
 color normal        "#5c6a72" "#fdf6e3"
 color message       "#5c6a72" "#fdf6e3"
@@ -31,9 +35,27 @@ color quoted3       "#f57d26" "#fdf6e3"
 color quoted4       "#df69ba" "#fdf6e3"
 color quoted5       "#f85552" "#fdf6e3"
 
-# Index: muted read mail, warm unread mail, conspicuous flags
+# Git patches in message bodies
+# Keep these before broad body-matching rules in other configuration files.
+color body bold     "#3a94c5" "#fdf6e3" "^diff --git "
+color body          "#939f91" "#fdf6e3" "^(index |new file mode |deleted file mode |similarity index |rename (from|to) )"
+color body bold     "#dfa000" "#fdf6e3" "^@@ .* @@"
+color body bold     "#35a77c" "#fdf6e3" "^[+][+][+] .*$"
+color body bold     "#f85552" "#fdf6e3" "^--- .*$"
+color body          "#35a77c" "#fdf6e3" "^[+].*$"
+color body          "#f85552" "#fdf6e3" "^[-].*$"
+
+# Index: distinct metadata, muted read mail, warm unread mail, conspicuous flags
+# These component colours apply to %d/%D (date) and %C (message number) in
+# index_format.  Explicit per-field ~N rules ensure new mail remains visible
+# when NeoMutt gives index components their own colours.
+color index_date    "#3a94c5" "#fdf6e3"
+color index_number  "#df69ba" "#fdf6e3"
 color index         "#939f91" "#fdf6e3" "~R"
-color index         "#5c6a72" "#fdf6e3" "~N"
+color index         "#f57d26" "#fdf6e3" "~N"
+color index_author  "#f57d26" "#fdf6e3" "~N"
+color index_flags   "#f57d26" "#fdf6e3" "~N"
+color index_subject "#f57d26" "#fdf6e3" "~N"
 color index         "#dfa000" "#fdf6e3" "~F"
 color index         "#f85552" "#fdf6e3" "~D"
 color index         "#35a77c" "#fdf6e3" "~T"

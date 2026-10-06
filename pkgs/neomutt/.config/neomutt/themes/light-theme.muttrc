@@ -1,0 +1,6 @@
+# Add a keybinding to load the dark theme
+macro index,pager <F5> "<enter-command>source ~/.config/neomutt/themes/dark-theme.muttrc<enter>" "Switch to light theme"
+
+# Source the actual theme
+source "./everforest-light-medium-neomutt.muttrc" # Everforest light theme generted by Codex
+# source "./gemini-everforest-light.muttrc"

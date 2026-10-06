@@ -31,9 +31,27 @@ color quoted3       "#e69875" "#2d353b"
 color quoted4       "#d699b6" "#2d353b"
 color quoted5       "#e67e80" "#2d353b"
 
-# Index: muted read mail, warm unread mail, conspicuous flags
+# Git patches in message bodies
+# Keep these before broad body-matching rules in other configuration files.
+color body bold     "#7fbbb3" "#2d353b" "^diff --git "
+color body          "#859289" "#2d353b" "^(index |new file mode |deleted file mode |similarity index |rename (from|to) )"
+color body bold     "#dbbc7f" "#2d353b" "^@@ .* @@"
+color body bold     "#a7c080" "#2d353b" "^[+][+][+] .*$"
+color body bold     "#e67e80" "#2d353b" "^--- .*$"
+color body          "#a7c080" "#2d353b" "^[+].*$"
+color body          "#e67e80" "#2d353b" "^[-].*$"
+
+# Index: distinct metadata, muted read mail, warm unread mail, conspicuous flags
+# These component colours apply to %d/%D (date) and %C (message number) in
+# index_format.  Explicit per-field ~N rules ensure new mail remains visible
+# when NeoMutt gives index components their own colours.
+color index_date    "#7fbbb3" "#2d353b"
+color index_number  "#d699b6" "#2d353b"
 color index         "#859289" "#2d353b" "~R"
-color index         "#d3c6aa" "#2d353b" "~N"
+color index         "#e69875" "#2d353b" "~N"
+color index_author  "#e69875" "#2d353b" "~N"
+color index_flags   "#e69875" "#2d353b" "~N"
+color index_subject "#e69875" "#2d353b" "~N"
 color index         "#dbbc7f" "#2d353b" "~F"
 color index         "#e67e80" "#2d353b" "~D"
 color index         "#7fbbb3" "#2d353b" "~T"
