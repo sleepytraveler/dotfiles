@@ -3,3 +3,6 @@
 -- Add any additional options here
 vim.g.snacks_animate = false
 vim.g.autoformat = false
+
+-- Set the MarkdownPreview to a specific port
+vim.g.mkdp_port = '8765'
