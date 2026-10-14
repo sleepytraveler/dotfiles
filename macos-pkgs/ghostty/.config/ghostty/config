@@ -1,7 +1,11 @@
 # font-family = "Cascadia Code PL"
-# font-family = "Consolas Nerd Font Mono"
-font-family = "Lilex Nerd Font Mono"
-font-size = 15
+font-family = "Consolas Nerd Font Mono"
+# font-family = "Lilex Nerd Font Mono"
+font-size = 16
+font-thicken = true
+font-thicken-strength=1
 theme = dark:Everforest Dark,light:Everforest Light
 term = "xterm-256color"
 # background-opacity = "0.98"
+macos-titlebar-style = tabs
+
