@@ -2,3 +2,9 @@
 **/.vscode
 **/.ccls-cache/
 *.aml
+
+# Ignore all hidden markdown files
+**/.*.md
+# Ignore all hidden drawio, drawio backup files
+**/.*.drawio
+**/.*.drawio.bkp
