@@ -8,6 +8,7 @@
 # Ignore all hidden drawio, drawio backup files
 **/.*.drawio
 **/.*.drawio.bkp
+**/.*.drawio.svg
 
 # Ignore AGENTS.md file
 AGENTS.md
