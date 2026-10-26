@@ -121,4 +121,4 @@ macro index A \
 set color_directcolor=yes
 
 # Source the colors from the theme file
-source themes/light-theme.muttrc
+source themes/dark-theme.muttrc
