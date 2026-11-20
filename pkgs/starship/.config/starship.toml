@@ -2,6 +2,7 @@ format = """
 $username\
 $hostname\
 $directory\
+$python\
 $line_break\
 $git_branch\
 $git_state\
@@ -98,4 +99,9 @@ grey2 = "#9da9a0"
 statusline1 = "#a7c080"
 statusline2 = "#d3c6aa"
 statusline3 = "#e67e80"
+
+[python]
+symbol = "🐍 "
+style = "bold yellow"
+format = 'via [${symbol}${version} (\($virtualenv\) )]($style) '
 
