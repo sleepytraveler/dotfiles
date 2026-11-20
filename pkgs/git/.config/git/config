@@ -15,7 +15,7 @@
 	ui = "auto"
 
 [commit]
-	gpgSign = false
+	gpgSign = true
 
 [core]
 	pager = "delta"
@@ -34,7 +34,7 @@
 	pruneTags = "true"
 
 [gpg]
-	format = "openpgp"
+	format = "ssh"
 
 [gpg "openpgp"]
 	program = "gpg"
@@ -57,7 +57,6 @@
 
 [user]
 	name = "Vanshidhar Konda"
-	userConfigOnly = "true"
 
 [include]
 	path = "./git-local.config"
